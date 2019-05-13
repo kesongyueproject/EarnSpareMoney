@@ -1,0 +1,36 @@
+/* pages/activityDetail/activityDetail.wxss */
+.line-css{
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.abstract{
+  color:gray;
+}
+
+.time{
+  text-align: right;
+  color: #999;
+}
+
+.description{
+  margin-top: 30px;
+}
+
+.description-text{
+  font-weight: bold;
+}
+
+.btn{
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right:0;
+  margin: 10px;
+}

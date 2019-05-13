@@ -1,0 +1,50 @@
+<!--pages/personal_info/personal_info.wxml-->
+
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg" > 
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">头像</view>
+            </view>
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{icon}}" />
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">名称</view>
+        <view class="weui-cell__ft">abc</view>
+    </view>
+   
+</view>
+
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">WeChatID</view>
+        <view class="weui-cell__ft">test2019</view>
+    </view>
+</view>
+
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">学校</view>
+        <view class="weui-cell__ft">中山大学</view>
+    </view> 
+</view>
+
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">联系电话</view>
+        <view class="weui-cell__ft">13888888888</view>
+    </view>
+</view>
+
+<view class="weui-cells">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">信用度</view>
+        <view class="weui-cell__ft">8</view>
+    </view>
+</view>
