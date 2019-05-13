@@ -5,6 +5,25 @@
 
 + 虽然我在github上给每个人都开了写的权限，但大家务必**先fork**到自己本地仓库，在自己本地仓库修改代码后再**push**到自己仓库，然后再**pull request**推到组织仓库，我再合并，这样能减少**冲突**。前端代码下除了app.*等几个文件，不要修改其它文件，特别是**pages**下其他人写的文件。自己的页面在pages文件夹下创建目录增加代码文件。还有就是**push**到自己仓库之前更新**fork**，也即重新fork。
 
++ 更新fork操作：https://segmentfault.com/q/1010000002590371
+
+  ```
+  首先要先确定一下是否建立了主repo的远程源：
+  
+  git remote -v
+  如果里面只能看到你自己的两个源(fetch 和 push)，那就需要添加主repo的源：
+  
+  git remote add upstream git@github.com:kesongyueproject/EarnSpareMoney.git
+  git remote -v
+  然后你就能看到upstream了。
+  
+  如果想与主repo合并：
+  
+  git fetch upstream
+  git merge upstream/master
+  ```
+
+
 ### 其它说明
 
 + front-end 前端代码文件夹
@@ -69,5 +88,6 @@
       ]
     }
   ```
+
 
 
