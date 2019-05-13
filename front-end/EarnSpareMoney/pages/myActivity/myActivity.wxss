@@ -1,0 +1,19 @@
+page{
+  background-color: #eeeeee
+}
+.my-activity-red{
+  color: red;
+}
+
+.my-activity-green{
+  color: green
+}
+
+.my-activity-blue{
+  color:blue;
+  font-size: 12px;
+}
+
+.my-activity-background{
+  background-color: gray;
+}
