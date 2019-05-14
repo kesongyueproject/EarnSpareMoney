@@ -1,0 +1,166 @@
+.-uploader__title{
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  color:#999;
+  font-size:15px;
+  padding-bottom: 5px;
+}
+.-uploader__file{
+  float:left;
+  margin-right:9px;
+  margin-bottom:9px;
+}
+.-uploader__img{
+  display:block;
+  width:79px;
+  height:79px;
+}
+.-uploader__input-box{
+  float:left;
+  position:relative;
+  margin-right:9px;
+  margin-bottom:9px;
+  width:77px;
+  height:77px;
+  border:1px solid #d9d9d9;
+}
+.-uploader__input-box:after,.-uploader__input-box:before{
+  content:" ";
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  background-color:#d9d9d9;
+}
+.-uploader__input-box:before{
+  width:2px;
+  height:39.5px;
+}
+.-uploader__input-box:after{
+  width:39.5px;
+  height:2px;
+}
+.-uploader__input-box:active{
+  border-color:#999;
+}
+.-uploader__input-box:active:after,.-uploader__input-box:active:before{
+  background-color:#999;
+}
+.-uploader__input{
+  position:absolute;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0
+}
+.-cells__title{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color:#999;
+  font-size:15px;
+}
+
+.-cells_after-title{
+  margin-top:0;
+}
+
+.-cell{
+  padding:10px 15px;
+  position:relative;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+
+.-cells{
+  position:relative;
+  margin-top:1.17647059em;
+  background-color:#fff;
+  line-height:1.41176471;
+  font-size:17px;
+}
+
+.-cell_input{
+  position: absolute;
+  top: 30px;
+  left: 2px;
+  padding-top:0;
+  padding-bottom:0;
+  border-top: 1px solid rgb(241, 239, 239);
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 30px;
+}
+
+.-label{
+  width:105px;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.-input{
+  height:2.58823529em;
+  min-height:2.58823529em;
+  line-height:2.58823529em;
+}
+
+.-cell__bd{
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  padding-left: 10px;
+}
+
+.-cell__ft{
+  text-align:right;
+  color:#999;
+}
+.confirmBut{
+  position: absolute;
+  top:480px;
+  height: 30px;
+  width: 80%;
+  margin-bottom: 50px;
+}
+.tasks{
+  position: absolute;
+  top: 70px;
+  left: 15px;
+}
+.tasksType{
+  color:#999;
+  font-size:15px;
+}
+.-icon-radio{
+  position: relative;
+  left: 100px;
+}
+.taskDes{
+  position: absolute;
+  top: 230px;
+  left: 15px;
+  color:#999;
+  font-size:15px;
+}
+.picture{
+  position: absolute;
+  top: 350px;
+  left: 15px;
+}
+.-cells_after-title{
+  position: absolute;
+  top: 230px;
+}
+.-textarea{
+  border-top: 1px solid rgb(241, 239, 239);
+  border-bottom: 1px solid rgb(241, 239, 239);
+  background-color: rgb(243, 243, 243);
+  font-size: 15px;
+}

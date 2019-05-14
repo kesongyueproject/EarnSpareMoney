@@ -1,0 +1,46 @@
+<view class='container'>
+  <view class="-cells__title">标题</view>
+  <view class="-cell -cell_input">
+    <view class="-cell__hd">
+      <view class="-label">标题</view>
+    </view>
+    <view class="-cell__bd">
+      <input class="-input" placeholder="请输入任务名称"/>
+    </view>
+  </view>
+  <view class='tasks'>
+    <view class='tasksType'>任务类别</view>
+    <radio-group bindchange="radioChange">
+      <label class="-cell -check__label" wx:for="{{radioItems}}" wx:key="value">
+        <radio class="-check" value="{{item.value}}" checked="{{item.checked}}"/>
+        <view class="-cell__bd">{{item.name}}</view>
+        <view class="-cell__ft -cell__ft_in-radio" wx:if="{{item.checked}}">
+          <icon class="-icon-radio" type="success_no_circle" size="16"></icon>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+  <view class="taskDes">任务描述</view>
+  <view class="-cells -cells_after-title">
+    <view class="-cell">
+      <view class="-cell__bd">
+        <textarea class="-textarea" placeholder="请输入文本" style="height: 5em" />
+      </view>
+    </view>
+  </view>
+  <view class='picture'>
+    <view class="-uploader__title">任务图标</view>
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="-uploader__file" bindtap="previewImage" id="{{item}}">
+        <image class="-uploader__img" src="{{item}}" mode="aspectFill" bindlongtap='removerImage'/>
+      </view>
+    </block>
+    <view class="-uploader__input-box">
+      <button class="-uploader__input" bindtap="chooseImage" wx:if="{{images.length<1}}"></button>
+    </view>
+  </view>
+  <view class='confirmBut'>
+    <button type='primary' bindtap='confirm'>确认发布</button>
+  </view>
+</view>
+
