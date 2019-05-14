@@ -4,7 +4,15 @@
     "pages/logs/logs",
     "pages/activityDetail/cancel_success",
     "pages/activityDetail/activityDetail",
+<<<<<<< HEAD
     "pages/personal_info/personal_info"
+=======
+    "pages/personal_info/personal_info",
+    "pages/register/register",
+    "pages/operator_success/operator_success",
+    "pages/releaseTask/releaseTask",
+    "pages/release_success/release_success"
+>>>>>>> first commit
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,7 +30,11 @@
         "text": "找活动"
       },
       {
+<<<<<<< HEAD
         "pagePath": "pages/myActivity/myActivity",
+=======
+        "pagePath": "pages/releaseTask/releaseTask",
+>>>>>>> first commit
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
         "text": "发布活动"
@@ -34,7 +46,11 @@
         "text": "我的活动"
       },
       {
+<<<<<<< HEAD
         "pagePath":"pages/myActivity/myActivity",
+=======
+        "pagePath":"pages/register/register",
+>>>>>>> first commit
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
         "text": "我的"
