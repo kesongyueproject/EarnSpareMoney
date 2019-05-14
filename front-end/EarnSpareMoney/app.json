@@ -4,15 +4,18 @@
     "pages/logs/logs",
     "pages/activityDetail/cancel_success",
     "pages/activityDetail/activityDetail",
-<<<<<<< HEAD
-    "pages/personal_info/personal_info"
-=======
+
     "pages/personal_info/personal_info",
     "pages/register/register",
     "pages/operator_success/operator_success",
     "pages/releaseTask/releaseTask",
-    "pages/release_success/release_success"
->>>>>>> first commit
+    "pages/release_success/release_success",
+    "pages/Me/index",
+    "pages/self_info/self_info",
+    "pages/notice/notices",
+    "pages/modify_tel/modify",
+    "pages/modify_school/modify",
+    "pages/credit_intro/credit_intro"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,11 +33,9 @@
         "text": "找活动"
       },
       {
-<<<<<<< HEAD
-        "pagePath": "pages/myActivity/myActivity",
-=======
+
         "pagePath": "pages/releaseTask/releaseTask",
->>>>>>> first commit
+
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
         "text": "发布活动"
@@ -46,14 +47,12 @@
         "text": "我的活动"
       },
       {
-<<<<<<< HEAD
-        "pagePath":"pages/myActivity/myActivity",
-=======
-        "pagePath":"pages/register/register",
->>>>>>> first commit
+
+        "pagePath":"pages/Me/index",
+
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
-        "text": "我的"
+        "text": "我"
       }
     ]
   }

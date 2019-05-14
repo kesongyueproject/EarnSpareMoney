@@ -1,0 +1,4 @@
+/* pages/credit_intro/credit_intro.wxss */
+page{
+    background-color: #FFFFFF;
+}

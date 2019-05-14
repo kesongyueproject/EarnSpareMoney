@@ -12,13 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-<<<<<<< HEAD
-	"appid": "wx8ba707053e125047",
-=======
-	"appid": "wxdbb6eed871d3f7f0",
->>>>>>> first commit
-	"projectname": "EarnSpareMoney",
+	"libVersion": "2.7.0",
+	"appid": "wxf6446f88791065c8",
+	"projectname": "miniprogram-test-3",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -1,0 +1,8 @@
+/* pages/modify_tel/modify.wxss */
+page{
+  background-color: #F8F8F8;
+
+}
+.right{
+  float: right;
+}
