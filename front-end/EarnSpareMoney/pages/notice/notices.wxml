@@ -1,0 +1,17 @@
+<!--pages/notice/notices.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell" bindtap='openAlert'>
+    <view class="weui-cell__hd">
+      <image src="/pages/image/contact.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd" >消息1</view>
+    <view class="weui-cell__ft">说明文字</view>
+  </view>
+  <view class="weui-cell" bindtap='openAlert'>
+    <view class="weui-cell__hd">
+      <image src="/pages/image/contact.png"  style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">消息2</view>
+    <view class="weui-cell__ft">说明文字</view>
+  </view>
+</view>
