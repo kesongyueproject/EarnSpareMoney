@@ -1,0 +1,54 @@
+/* pages/author_info/author_info.wxss */
+page{
+  width: 100%;
+  background-color: #EDEDED;
+  display:flex; 
+  flex-direction:column;
+  font-size: 18px;
+}
+
+.avatar{
+  width: 100%;
+  height: 140rpx;
+  background-color: white;
+  line-height: 140rpx;
+}
+
+.avatar_img{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed; 
+  right: 0;
+  margin: 20rpx 20rpx 0 0;
+}
+
+.item{
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  line-height: 100rpx;
+}
+
+.left_text{
+  margin-left: 30rpx;
+  color: black;
+}
+
+.right_text{
+  position: fixed; 
+  right: 0;
+  margin-right: 30rpx;
+  color: gray;
+}
+
+.name, .school, .phone, .credit{
+  margin-top: 20rpx;
+}
+
+.wechat{
+  border-top: 1rpx solid gray;
+}
+
+.bottom{
+  background-color: gainsboro;
+}

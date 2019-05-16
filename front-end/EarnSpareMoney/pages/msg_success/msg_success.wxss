@@ -1,0 +1,8 @@
+/* pages/msg_success/msg_success.wxss */
+msg_success{
+    background-color: #FFFFFF;
+}
+
+.weui-btn{
+  margin: 0rpx 30rpx 0rpx 30rpx;
+}

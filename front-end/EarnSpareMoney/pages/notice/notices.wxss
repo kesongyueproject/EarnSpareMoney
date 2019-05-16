@@ -1,4 +1,4 @@
 /* pages/notice/notices.wxss */
 page{
-  background-color: #F8F8F8;
+  background-color: #EDEDED;
 }

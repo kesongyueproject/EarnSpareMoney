@@ -1,3 +1,7 @@
+page{
+  background-color: #EDEDED;
+}
+
 .-uploader__title{
   -webkit-box-flex:1;
   -webkit-flex:1;
