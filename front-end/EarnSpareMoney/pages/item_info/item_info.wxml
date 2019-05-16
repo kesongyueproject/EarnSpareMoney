@@ -1,0 +1,21 @@
+<!--pages/item_info/item_info.wxml-->
+<view class='item_info'>
+  <view class='top'>
+    <text class='title'>{{title}}</text>
+    <view class='author' bindtap='getAuthorInfo'>
+      <image class='img' src='{{img}}'></image>
+      <view class='author_info'>
+        <text class='name'>{{name}}</text>
+        <text class='digest'>{{digest}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <text class='subtitle'>任务详情</text>
+    <text class='description'>{{description}}</text>
+    <view class='black'></view>
+    <button class='button' type="primary" bindtap='participate'>我要参加</button>
+
+  </view>
+</view>

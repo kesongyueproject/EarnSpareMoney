@@ -1,6 +1,6 @@
 /* pages/modify/modify.wxss */
 page{
-  background-color: #F8F8F8;
+  background-color: #EDEDED;
 
 }
 .right{

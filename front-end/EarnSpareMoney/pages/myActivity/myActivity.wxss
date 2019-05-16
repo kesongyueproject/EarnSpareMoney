@@ -1,6 +1,11 @@
 page{
-  background-color: #eeeeee
+  background-color: #EDEDED;
 }
+
+.navbar{
+  background-color: white;
+}
+
 .my-activity-red{
   color: red;
 }
@@ -10,10 +15,10 @@ page{
 }
 
 .my-activity-blue{
-  color:blue;
+  color:gray;
   font-size: 12px;
 }
 
 .my-activity-background{
-  background-color: gray;
+  background-color: #EDEDED;
 }
