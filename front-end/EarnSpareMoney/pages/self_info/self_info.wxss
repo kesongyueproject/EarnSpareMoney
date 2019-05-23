@@ -1,5 +1,0 @@
-/* pages/self_info/self_info.wxss */
-
-page{
-  background-color: #EDEDED;
-}

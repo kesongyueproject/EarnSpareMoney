@@ -1,8 +1,0 @@
-/* pages/modify/modify.wxss */
-page{
-  background-color: #EDEDED;
-
-}
-.right{
-  float: right;
-}

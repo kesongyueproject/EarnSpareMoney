@@ -1,8 +1,0 @@
-/* pages/modify_tel/modify.wxss */
-page{
-  background-color: #EDEDED;
-
-}
-.right{
-  float: right;
-}
