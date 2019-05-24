@@ -1,0 +1,62 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <view>头像</view>
+    </view>
+    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+      <image src="/pages/image/contact.png"  style="width: 50px; height: 50px; display: block"/>
+    </view>    
+  </view>
+</view>
+
+<view class="weui-cells__title"></view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">名称</view>
+    <view class="weui-cell__ft">abc</view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">WeChatID</view>
+      <view class="weui-cell__ft">abc</view>
+  </view>
+</view>
+
+<view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/modify_school/modify" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+  
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">学校</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">SYSU</view>
+      
+
+  </navigator>
+
+  
+
+<navigator url="/pages/modify_tel/modify" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">联系电话</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">18888888888</view>
+</navigator>
+
+
+  
+    <navigator url="/pages/credit_intro/credit_intro" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">信用度</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">8</view>
+
+
+    </navigator>
+
+
+  </view>
+
+
+
+
