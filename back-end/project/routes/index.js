@@ -97,7 +97,7 @@ router.put('/user', function(req, res, next) {
 router.get('/user', function(req, res, next) {
   res.json(200, {
     msg: "success",
-    user: req.query.user
+    user: req.query.user,
     nickname: "cxk",
     school: "SYSU",
     phone: "12345678900",
@@ -129,9 +129,10 @@ router.get('/mission', function(req, res, next) {
   res.json(200, {
     msg: "success",
     mid: req.query.mid,
-    publisher: 555,
+    publisher: "test",
     title: "aaa",
-    details: "喜欢唱、跳、rap还有篮球"
+    details: "喜欢唱、跳、rap还有篮球",
+    reward: 4396
   });
 });
 
@@ -144,13 +145,15 @@ router.get('/missions', function(req, res, next) {
       mid: 1,
       publisher: "test",
       title: "aaa",
-      details: "喜欢唱、跳、rap还有篮球"
+      details: "喜欢唱、跳、rap还有篮球",
+      reward: 4396
     },
     {
       mid:2,
       publisher: "test",
       title: "bbb",
-      details: "讨厌唱、跳、rap还有篮球"      
+      details: "讨厌唱、跳、rap还有篮球",
+      reward: 4396
     }
     ]
   });
@@ -161,7 +164,8 @@ router.post('/mission', function(req, res, next) {
     msg: "success",
     publisher: req.body.publisher,
     title: req.body.title,
-    details: req.body.details
+    details: req.body.details,
+    reward: req.body.reward
   });
 });
 
