@@ -97,6 +97,7 @@ router.put('/user', function(req, res, next) {
 router.get('/user', function(req, res, next) {
   res.json(200, {
     msg: "success",
+    user: req.query.user
     nickname: "cxk",
     school: "SYSU",
     phone: "12345678900",
@@ -141,13 +142,13 @@ router.get('/missions', function(req, res, next) {
     missions: [
     {
       mid: 1,
-      publisher: test,
+      publisher: "test",
       title: "aaa",
       details: "喜欢唱、跳、rap还有篮球"
     },
     {
       mid:2,
-      publisher: test,
+      publisher: "test",
       title: "bbb",
       details: "讨厌唱、跳、rap还有篮球"      
     }
