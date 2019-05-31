@@ -12,19 +12,13 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-<<<<<<< HEAD
-	"appid": "wx8ba707053e125047",
-=======
+	"libVersion": "2.7.0",
 	"appid": "wxdbb6eed871d3f7f0",
->>>>>>> first commit
-	"projectname": "EarnSpareMoney",
+	"projectname": "1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

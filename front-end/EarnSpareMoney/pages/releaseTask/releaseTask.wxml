@@ -12,19 +12,21 @@
     <view class='tasksType'>任务类别</view>
     <radio-group bindchange="radioChange">
       <label class="-cell -check__label" wx:for="{{radioItems}}" wx:key="value">
-        <radio class="-check" value="{{item.value}}" checked="{{item.checked}}"/>
+        <radio class="-check" value="{{item.value}}" checked="{{item.checked}}" size="35rpx"/>
         <view class="-cell__bd">{{item.name}}</view>
         <view class="-cell__ft -cell__ft_in-radio" wx:if="{{item.checked}}">
-          <icon class="-icon-radio" type="success_no_circle" size="16"></icon>
+          <icon class="-icon-radio" type="success_no_circle" size="30rpx"></icon>
         </view>
       </label>
     </radio-group>
   </view>
-  <view class="taskDes">任务描述</view>
-  <view class="-cells -cells_after-title">
-    <view class="-cell">
-      <view class="-cell__bd">
-        <textarea class="-textarea" placeholder="请输入文本" style="height: 5em" />
+  <view class='description'>
+    <view class="taskDes">任务描述</view>
+    <view class="-cells -cells_after-title">
+      <view class="-cell">
+        <view class="-cell__bd">
+          <textarea class="-textarea" placeholder="请输入文本"/>
+        </view>
       </view>
     </view>
   </view>
