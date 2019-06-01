@@ -1,0 +1,18 @@
+<!--pages/msg_success/msg_success.wxml-->
+<view class="msg_success">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">操作成功</view>
+            <view class="weui-msg__desc">你已成功参加</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" bindtap='getAllActivity'>查看我的活动</button>
+                <button class="weui-btn" type="default" bindtap='back'>返回</button>
+            </view>
+        </view>
+    </view>
+</view>

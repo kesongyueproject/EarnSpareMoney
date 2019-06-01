@@ -1,1 +1,4 @@
 /* pages/personal_info/personal_info.wxss */
+page{
+  background-color: #EDEDED;
+}

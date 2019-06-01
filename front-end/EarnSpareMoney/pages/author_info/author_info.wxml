@@ -1,0 +1,32 @@
+<!--pages/author_info/author_info.wxml-->
+<view class='author_info'>
+  <view class='avatar'>
+    <text class='avatar_text left_text'>头像</text>
+    <image class='avatar_img' src='{{img}}'></image>
+  </view>
+
+  <view class='name item'>
+    <text class='name_text left_text'>名称</text>
+    <text class='his_name right_text'>{{name}}</text>
+  </view>
+
+  <view class='wechat item'>
+    <text class='wechat_text left_text'>WeChat ID</text>
+    <text class='his_wechat right_text'>{{wechat}}</text>
+  </view>
+
+  <view class='school item'>
+    <text class='school_text left_text'>学校</text>
+    <text class='his_school right_text'>{{school}}</text>
+  </view>
+
+  <view class='phone item'>
+    <text class='phone_text left_text'>联系电话</text>
+    <text class='his_phone_number right_text'>{{phone}}</text>
+  </view>
+
+  <view class='credit item'>
+    <text class='credit_text left_text'>信用度</text>
+    <text class='his_credit right_text'>{{credit}}</text>
+  </view> 
+</view>

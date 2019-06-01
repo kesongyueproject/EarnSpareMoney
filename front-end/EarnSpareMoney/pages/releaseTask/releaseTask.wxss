@@ -1,3 +1,4 @@
+
 .-uploader__title{
   -webkit-box-flex:1;
   -webkit-flex:1;
@@ -25,7 +26,7 @@
   margin-bottom:9rpx;
   width:148rpx;
   height:148rpx;
-  border:1rpx solid #d9d9d9;
+  border:1px solid #d9d9d9;
 }
 .-uploader__input-box:after,.-uploader__input-box:before{
   content:" ";
@@ -37,12 +38,12 @@
   background-color:#d9d9d9;
 }
 .-uploader__input-box:before{
-  width:2rpx;
+  width:2px;
   height:120rpx;
 }
 .-uploader__input-box:after{
   width:120rpx;
-  height:2rpx;
+  height:2px;
 }
 .-uploader__input-box:active{
   border-color:#999;
@@ -63,7 +64,6 @@
   position: absolute;
   top: 20rpx;
   left: 25rpx;
-  margin-bottom: 10rpx;
   color:#999;
   font-size:30rpx;
 }
@@ -94,16 +94,37 @@
   position: absolute;
   top: 60rpx;
   left: 0;
-  padding-top:0;
-  padding-bottom:0;
+  margin-top:10rpx;
+  margin-bottom:0;
   border-top: 1px solid rgb(241, 239, 239);
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 60rpx;
+  height: 40rpx;
+  width: 750rpx;
+}
+
+.-cell_input_1{
+  position: absolute;
+  top: 140rpx;
+  left: 0;
+  margin-top:10rpx;
+  margin-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 40rpx;
+  width: 750rpx;
+}
+.-cell_input_2{
+  position: absolute;
+  top: 220rpx;
+  left: 0;
+  margin-top:10rpx;
+  margin-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 40rpx;
   width: 750rpx;
 }
 
 .-label{
-  width:105rpx;
+  width:200rpx;
   word-wrap:break-word;
   word-break:break-all;
   font-size: 40rpx;
@@ -122,6 +143,7 @@
   -webkit-flex:1;
   flex:1;
   padding-left: 20rpx;
+  font-size: 30rpx;
 }
 
 .-cell__ft{
@@ -130,14 +152,14 @@
 }
 .confirmBut{
   position: absolute;
-  top:1140rpx;
+  top:1340rpx;
   height: 30rpx;
   width: 80%;
   margin-bottom: 100rpx;
 }
 .tasks{
   position: absolute;
-  top: 130rpx;
+  top: 330rpx;
   left: 20rpx;
 }
 .tasksType{
@@ -151,7 +173,7 @@
 }
 .taskDes{
   position: absolute;
-  top: 480rpx;
+  top: 680rpx;
   left: 20rpx;
   margin-bottom: 5rpx;
   color:#999;
@@ -159,12 +181,12 @@
 }
 .picture{
   position: absolute;
-  top: 760rpx;
+  top: 960rpx;
   left: 20rpx;
 }
 .-cells_after-title{
   position: absolute;
-  top: 480rpx;
+  top: 680rpx;
   left: 0;
   width: 100%;
 }
@@ -173,8 +195,11 @@
   border-bottom: 1px solid rgb(241, 239, 239);
   background-color: rgb(243, 243, 243);
   font-size: 30rpx;
+  position: absolute;
+  top: 730rpx;
+  left: 30rpx;
+  width: 690rpx;
   height: 200rpx;
-  width: 100%;
 }
 
 .description{
