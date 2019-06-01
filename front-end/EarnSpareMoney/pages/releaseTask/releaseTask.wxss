@@ -1,32 +1,31 @@
-page{
-  background-color: #EDEDED;
-}
 
 .-uploader__title{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
   color:#999;
-  font-size:15px;
-  padding-bottom: 5px;
+  font-size:30rpx;
+  padding-bottom: 10rpx;
 }
 .-uploader__file{
   float:left;
-  margin-right:9px;
-  margin-bottom:9px;
+  margin-right:9rpx;
+  margin-bottom:9rpx;
 }
 .-uploader__img{
   display:block;
-  width:79px;
-  height:79px;
+  width:150rpx;
+  height:150rpx;
+  margin-left: 40rpx;
 }
 .-uploader__input-box{
   float:left;
   position:relative;
-  margin-right:9px;
-  margin-bottom:9px;
-  width:77px;
-  height:77px;
+  margin-right:9rpx;
+  margin-left: 40rpx;
+  margin-bottom:9rpx;
+  width:148rpx;
+  height:148rpx;
   border:1px solid #d9d9d9;
 }
 .-uploader__input-box:after,.-uploader__input-box:before{
@@ -40,10 +39,10 @@ page{
 }
 .-uploader__input-box:before{
   width:2px;
-  height:39.5px;
+  height:120rpx;
 }
 .-uploader__input-box:after{
-  width:39.5px;
+  width:120rpx;
   height:2px;
 }
 .-uploader__input-box:active{
@@ -63,10 +62,10 @@ page{
 }
 .-cells__title{
   position: absolute;
-  top: 10px;
-  left: 15px;
+  top: 20rpx;
+  left: 25rpx;
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
 }
 
 .-cells_after-title{
@@ -74,7 +73,7 @@ page{
 }
 
 .-cell{
-  padding:10px 15px;
+  padding:20rpx 30rpx;
   position:relative;
   display:-webkit-box;
   display:-webkit-flex;
@@ -85,7 +84,6 @@ page{
 }
 
 .-cells{
-  position:relative;
   margin-top:1.17647059em;
   background-color:#fff;
   line-height:1.41176471;
@@ -94,32 +92,58 @@ page{
 
 .-cell_input{
   position: absolute;
-  top: 30px;
-  left: 2px;
-  padding-top:0;
-  padding-bottom:0;
+  top: 60rpx;
+  left: 0;
+  margin-top:10rpx;
+  margin-bottom:0;
   border-top: 1px solid rgb(241, 239, 239);
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 30px;
+  height: 40rpx;
+  width: 750rpx;
+}
+
+.-cell_input_1{
+  position: absolute;
+  top: 140rpx;
+  left: 0;
+  margin-top:10rpx;
+  margin-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 40rpx;
+  width: 750rpx;
+}
+.-cell_input_2{
+  position: absolute;
+  top: 220rpx;
+  left: 0;
+  margin-top:10rpx;
+  margin-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 40rpx;
+  width: 750rpx;
 }
 
 .-label{
-  width:105px;
+  width:200rpx;
   word-wrap:break-word;
   word-break:break-all;
+  font-size: 40rpx;
 }
 
 .-input{
   height:2.58823529em;
   min-height:2.58823529em;
   line-height:2.58823529em;
+  font-size: 30rpx;
+  width:90%;
 }
 
 .-cell__bd{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
-  padding-left: 10px;
+  padding-left: 20rpx;
+  font-size: 30rpx;
 }
 
 .-cell__ft{
@@ -128,43 +152,56 @@ page{
 }
 .confirmBut{
   position: absolute;
-  top:480px;
-  height: 30px;
+  top:1340rpx;
+  height: 30rpx;
   width: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 100rpx;
 }
 .tasks{
   position: absolute;
-  top: 70px;
-  left: 15px;
+  top: 330rpx;
+  left: 20rpx;
 }
 .tasksType{
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
 }
 .-icon-radio{
   position: relative;
-  left: 100px;
+  left: 300rpx;
+
 }
 .taskDes{
   position: absolute;
-  top: 230px;
-  left: 15px;
+  top: 680rpx;
+  left: 20rpx;
+  margin-bottom: 5rpx;
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
 }
 .picture{
   position: absolute;
-  top: 350px;
-  left: 15px;
+  top: 960rpx;
+  left: 20rpx;
 }
 .-cells_after-title{
   position: absolute;
-  top: 230px;
+  top: 680rpx;
+  left: 0;
+  width: 100%;
 }
 .-textarea{
   border-top: 1px solid rgb(241, 239, 239);
   border-bottom: 1px solid rgb(241, 239, 239);
   background-color: rgb(243, 243, 243);
-  font-size: 15px;
+  font-size: 30rpx;
+  position: absolute;
+  top: 730rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: 200rpx;
+}
+
+.description{
+  height: 300rpx;
 }
