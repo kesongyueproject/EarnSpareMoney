@@ -37,6 +37,7 @@
         "text": "找活动"
       },
       {
+        "pagePath": "pages/myActivity/myActivity",
         "pagePath": "pages/releaseTask/releaseTask",
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
@@ -49,6 +50,8 @@
         "text": "我的活动"
       },
       {
+        "pagePath":"pages/myActivity/myActivity",
+        "pagePath":"pages/register/register",
         "pagePath": "pages/Me/index",
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
