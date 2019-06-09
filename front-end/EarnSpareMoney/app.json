@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/search_tasks/search_tasks",
     "pages/myActivity/myActivity",
     "pages/logs/logs",
@@ -19,7 +18,8 @@
     "pages/credit_intro/credit_intro",
     "pages/item_info/item_info",
     "pages/author_info/author_info",
-    "pages/msg_success/msg_success"
+    "pages/msg_success/msg_success",
+    "pages/myActivity/allActivity"
   ],
   "window": {
     "backgroundTextStyle": "light",
