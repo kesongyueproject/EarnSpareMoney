@@ -5,7 +5,11 @@ Page({
     tabs: ["我参加的", "我发布的"],
     activeIndex: 0,
     sliderOffset: 0,
-    sliderLeft: 0
+    sliderLeft: 0,
+    activityJoinIng:[],
+    activityJoinEnd:[],
+    activityPubishIng:[],
+    activityPublishEnd:[]
   },
   onLoad: function () {
     var that = this;
@@ -18,6 +22,22 @@ Page({
         });
       }
     });
+
+    wx.request({
+      url: 'https://happyzhier.club/missions',
+      method:'GET',
+      dataType:'json',
+      header:{'content-type':'application/json'},
+      success:function(res){
+        console.log(res.data.missions);
+        that.setData({
+          activityJoinIng: res.data.missions,
+          activityJoinEnd: res.data.missions,
+          activityPubishIng: res.data.missions,
+          activityPublishEnd: res.data.missions
+        });
+      }
+    });
   },
   tabClick: function (e) {
     this.setData({
@@ -26,8 +46,11 @@ Page({
     });
   },
   publish_doing_more:function(){
-    this.setData({
-      activeIndex:2
+    // this.setData({
+    //   activeIndex:2
+    // });
+    wx.navigateTo({
+      url:'allActivity'
     });
   }
 });
