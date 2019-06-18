@@ -1,4 +1,4 @@
-// pages/modify_tel/modify.js
+// pages/modify_nickname/modify_nickname.js
 Page({
 
   /**
@@ -62,22 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  openLoading: function () {
-    wx.showToast({
-      title: '',
-      icon: 'loading',
-      duration: 3000
-    });
-    wx.request({
-      url: 'https://happyzhier.club/mission?mid=123456',
-      method: 'GET',
-      success: function (res) {
-        console.log(res.data)
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    })
   }
 })

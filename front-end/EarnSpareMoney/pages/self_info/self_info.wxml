@@ -1,24 +1,49 @@
 <view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell">
-    <view class="weui-cell__bd">
+  <navigator url="/pages/modify_signature/modify_signature" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+        <view class="weui-cell__bd">
       <view>头像</view>
     </view>
-    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+    <view class="weui-cell__hd weui-cell__ft_in-access" style="position: relative;margin-right: 10px;">
       <image src="/pages/image/contact.png"  style="width: 50px; height: 50px; display: block"/>
     </view>    
-  </view>
+  
+
+  </navigator>
+
+  
 </view>
 
 <view class="weui-cells__title"></view>
 <view class="weui-cells weui-cells_after-title">
+
   <view class="weui-cell">
-    <view class="weui-cell__bd">名称</view>
-    <view class="weui-cell__ft">abc</view>
-  </view>
-  <view class="weui-cell">
-    <view class="weui-cell__bd">WeChatID</view>
+    <view class="weui-cell__bd">ID</view>
       <view class="weui-cell__ft">abc</view>
   </view>
+
+  <navigator url="/pages/modify_nickname/modify_nickname" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+  
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">昵称</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">abc</view>
+      
+
+  </navigator>
+
+    <navigator url="/pages/modify_signature/modify_signature" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+  
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">个性签名</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">abc</view>
+      
+
+  </navigator>
+
 </view>
 
 <view class="weui-cells__title"></view>
