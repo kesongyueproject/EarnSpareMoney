@@ -1,0 +1,8 @@
+/* pages/modify_nickname/modify_nickname.wxss */
+page{
+  background-color: #F8F8F8;
+
+}
+.right{
+  float: right;
+}

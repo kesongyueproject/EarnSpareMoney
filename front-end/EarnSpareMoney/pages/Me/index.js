@@ -42,6 +42,18 @@ Page({
         }
       })
     }
+    wx.request({
+      url: 'https://happyzhier.club/user',
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+
+
   },
   getUserInfo: function(e) {
     console.log(e)
