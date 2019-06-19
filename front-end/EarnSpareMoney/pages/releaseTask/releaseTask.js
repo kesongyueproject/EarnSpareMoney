@@ -1,3 +1,4 @@
+
 //releaseTask.js
 //获取应用实例
 const app = getApp()
@@ -9,7 +10,12 @@ Page({
       { name: 'cell standard', value: '1'},
       { name: 'cell standard', value: '2'},
     ],
-    images: []
+    images: [],
+    biaoti : '',
+    faburen : '',
+    baochou : '',
+    miaoshu : '',
+    tubiao : 0
   },
   radioChange: function (e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value);
@@ -79,6 +85,47 @@ Page({
         }
       }
     });
+  },
+  input_biaoti: function(e){
+    this.setData({
+      biaoti : e.detail.value
+    })
+  },
+  input_faburen: function (e) {
+    this.setData({
+      faburen : e.detail.value
+    })
+  },
+  input_baochou: function (e) {
+    this.setData({
+      baochou : e.detail.value
+    })
+  },
+  input_miaoshu: function (e) {
+    this.setData({
+      miaoshu : e.detail.value
+    })
+  },
+  confirm: function(){
+    var that = this;
+    wx.request({
+      url: 'https://happyzhier.club/mission',
+      data:{
+        publisher: that.data.faburen,
+        title: that.data.biaoti,
+        details: that.data.miaoshu,
+        reward: that.data.baochou
+      },
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      method: 'PUT',
+      success: function (res) {
+        console.log("success");
+      },
+      fail: function (res) {
+        console.log("fail");
+      }
+    })
   }
-
 })
