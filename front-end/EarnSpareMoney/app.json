@@ -1,14 +1,15 @@
 {
   "pages": [
-    
+    "pages/firstPage/firstPage",
     "pages/search_tasks/search_tasks",
     "pages/myActivity/myActivity",
     "pages/logs/logs",
     "pages/activityDetail/cancel_success",
     "pages/activityDetail/activityDetail",
     "pages/personal_info/personal_info",
-    "pages/register/register",
     "pages/operator_success/operator_success",
+    "pages/login/login",
+    "pages/register/register",
     "pages/releaseTask/releaseTask",
     "pages/release_success/release_success",
     "pages/Me/index",
@@ -37,7 +38,6 @@
         "text": "找活动"
       },
       {
-        "pagePath": "pages/myActivity/myActivity",
         "pagePath": "pages/releaseTask/releaseTask",
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
@@ -50,8 +50,6 @@
         "text": "我的活动"
       },
       {
-        "pagePath":"pages/myActivity/myActivity",
-        "pagePath":"pages/register/register",
         "pagePath": "pages/Me/index",
         "iconPath": "pages/image/contact.png",
         "selectedIconPath": "pages/image/contact.png",
