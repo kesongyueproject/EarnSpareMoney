@@ -1,4 +1,8 @@
 /* pages/activityDetail/activityDetail.wxss */
+.title{
+  text-align: center;
+}
+
 .line-css{
   padding: 10px 15px;
   position: relative;

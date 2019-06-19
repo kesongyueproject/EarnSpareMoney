@@ -1,8 +1,8 @@
 <view class='container'>
-  <view class="-cells__title">任务信息</view>
+  <view class="-cells__title">标题</view>
   <view class="-cell -cell_input">
     <view class="-cell__hd">
-      <view class="-label">标题：</view>
+      <view class="-label">标题</view>
     </view>
     <view class="-cell__bd">
       <input class="-input" placeholder="请输入任务名称" bindinput='input_biaoti'/>
@@ -24,14 +24,14 @@
       <input class="-input" placeholder="请输入报酬（人民币/元）" bindinput='input_baochou'/>
     </view>
   </view>
- <view class='tasks'>
+  <view class='tasks'>
     <view class='tasksType'>任务类别</view>
     <radio-group bindchange="radioChange">
       <label class="-cell -check__label" wx:for="{{radioItems}}" wx:key="value">
         <radio class="-check" value="{{item.value}}" checked="{{item.checked}}"/>
         <view class="-cell__bd">{{item.name}}</view>
         <view class="-cell__ft -cell__ft_in-radio" wx:if="{{item.checked}}">
-          <icon class="-icon-radio" type="success_no_circle" size="30rpx"></icon>
+          <icon class="-icon-radio" type="success_no_circle" size="16"></icon>
         </view>
       </label>
     </radio-group>

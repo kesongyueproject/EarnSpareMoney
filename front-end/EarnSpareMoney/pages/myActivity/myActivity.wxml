@@ -15,33 +15,22 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务一</view>
+                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}" bindtap='onGoJoinIngDetail'>
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__bd weui-cell_primary">
+                                    <view>{{item.title}}</view>
+                                </view>
+                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                             </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务二</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务三</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        </block>
+
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
                                 <view>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+                        </view>
                     </view>
                 </view>
             </view>
@@ -52,33 +41,22 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务一</view>
+                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__bd weui-cell_primary">
+                                    <view>{{item.title}}</view>
+                                </view>
+                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                             </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务二</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务三</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="/pages/find/find" class="weui-cell weui-cell_access" hover-class="weui-cell_active" open-type='navigate'>
+                        </block>
+
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
                                 <view>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+                        </view>
                     </view>
                 </view>
             </view>
@@ -91,33 +69,22 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务一</view>
+                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__bd weui-cell_primary">
+                                    <view>{{item.title}}</view>
+                                </view>
+                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                             </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务二</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务三</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        </block>
+
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
                                 <view>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+                        </view>
                     </view>
                 </view>
             </view>
@@ -128,33 +95,22 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务一</view>
+                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__bd weui-cell_primary">
+                                    <view>{{item.title}}</view>
+                                </view>
+                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                             </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>任务二</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>发布的任务三</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='publish_doing_more'>
+                        </block>
+
+                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
-                                <view>查看更多</view>
+                                <view bindtap='publish_doing_more'>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+                        </view>
                     </view>
                 </view>
             </view>
@@ -162,13 +118,13 @@
     </view>
 
     <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
             <view class="weui-cell__bd weui-cell_primary">
                 <view>任务三</view>
             </view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator>
+        </view>
     </view>
 </view>
        
