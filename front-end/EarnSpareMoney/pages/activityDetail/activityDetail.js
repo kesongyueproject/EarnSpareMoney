@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    icon:"/pages/image/chat.png"
+    icon:"/pages/image/chat.png",
+    activity:{}
   },
   onClick:function(){
     wx.showModal({
@@ -16,7 +17,7 @@ Page({
       success:function(res){
         console.log(res);
         if (res.confirm) {
-          wx.navigateTo({
+          wx.redirectTo({
             url: 'cancel_success',
           })
         } else {
@@ -30,6 +31,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var mid = options.mid;
+    var that = this;
+    wx.request({
+      url: 'http://happyzhier.club:3000/mission?mid='+mid,
+      method: 'GET',
+      dataType: 'json',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          activity:res.data
+        });
+
+      }
+    });
 
   },
 
