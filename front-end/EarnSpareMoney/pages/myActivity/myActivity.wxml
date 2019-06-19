@@ -16,8 +16,8 @@
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
                         <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
-                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__hd"><image src="{{item.img}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}" bindtap='onGoJoinIngDetail'>
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
                                 </view>
@@ -43,7 +43,7 @@
                     <view class="weui-cells weui-cells_in-small-appmsg">
                         <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
                             <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__hd"><image src="{{item.img}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
                                 </view>
@@ -71,7 +71,7 @@
                     <view class="weui-cells weui-cells_in-small-appmsg">
                         <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
                             <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__hd"><image src="{{item.img}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
                                 </view>
@@ -97,7 +97,7 @@
                     <view class="weui-cells weui-cells_in-small-appmsg">
                         <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
                             <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__hd"><image src="{{item.img}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                                <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
                                 </view>

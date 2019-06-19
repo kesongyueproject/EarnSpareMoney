@@ -24,21 +24,23 @@ Page({
     });
 
     wx.request({
-      url: 'https://happyzhier.club/missions',
+      url: 'http://happyzhier.club:3000/missions',
       method:'GET',
-      dataType:'json',
+      dataType:'json', 
       header:{'content-type':'application/json'},
       success:function(res){
-        console.log(res.data.missions);
+        //console.log(res.data);
         that.setData({
-          activityJoinIng: res.data.missions,
-          activityJoinEnd: res.data.missions,
-          activityPubishIng: res.data.missions,
-          activityPublishEnd: res.data.missions
+          activityJoinIng: res.data.data,
+          activityJoinEnd: res.data.data,
+          activityPubishIng: res.data.data,
+          activityPublishEnd: res.data.data
         });
       }
     });
+    
   },
+
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
@@ -52,5 +54,15 @@ Page({
     wx.navigateTo({
       url:'allActivity'
     });
+  },
+  onGoJoinIngDetail:function(event){
+    //console.log(event.currentTarget.dataset.mid);
+    var mid = event.currentTarget.dataset.mid;
+    //url = '/pages/activityDetail/activityDetail?mid='+mid;
+    var obj = {
+      url: '/pages/activityDetail/activityDetail?mid=' + mid
+    };
+    wx.navigateTo(obj);
   }
+
 });

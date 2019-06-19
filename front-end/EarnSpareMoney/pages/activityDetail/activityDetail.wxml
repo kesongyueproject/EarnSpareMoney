@@ -1,17 +1,16 @@
 <!--pages/activityDetail/activityDetail.wxml-->
-<view class="page__title">标题</view>
+<view class="page__title title">{{activity.title}}</view>
 
 <view class="weui-panel weui-panel_access">
     <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_appmsg" >
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                <image class="weui-media-box__thumb" src="{{icon}}" />
+                <image class="weui-media-box__thumb" src="{{activity.imgs_url}}" />
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                 <view class="weui-media-box__title">发起人</view>
                 <view class="weui-media-box__desc">摘要信息</view>
             </view>
-            <view class="time">12:31</view>
         </view>
     </view>
 </view>
@@ -19,13 +18,8 @@
 <view class="weui-cells weui-cells_after-title description">
     <view class="weui-article">
         <view class="weui-article__title description-text">描述</view>
-        <view class="weui-article__p">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-        </view>
+        <view class="weui-article__p">{{activity.description}}</view>
     </view>
 </view>
 
-<button class="weui-btn btn" type="warn" bindtap="onClick">警告类操作 Normal</button>
+<button class="weui-btn btn" type="warn" bindtap="onClick">取消</button>
