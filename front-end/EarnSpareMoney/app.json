@@ -19,7 +19,9 @@
     "pages/item_info/item_info",
     "pages/author_info/author_info",
     "pages/msg_success/msg_success",
-    "pages/myActivity/allActivity"
+    "pages/myActivity/allActivity",
+    "pages/modify_signature/modify_signature",
+    "pages/modify_nickname/modify_nickname"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,26 +34,26 @@
     "list": [
       {
         "pagePath": "pages/search_tasks/search_tasks",
-        "iconPath": "pages/image/chat.png",
-        "selectedIconPath": "pages/image/chat.png",
+        "iconPath": "pages/image/tongji.png",
+        "selectedIconPath": "pages/image/tongji.png",
         "text": "找活动"
       },
       {
         "pagePath": "pages/releaseTask/releaseTask",
-        "iconPath": "pages/image/contact.png",
-        "selectedIconPath": "pages/image/contact.png",
+        "iconPath": "pages/image/edit.png",
+        "selectedIconPath": "pages/image/edit.png",
         "text": "发布活动"
       },
       {
         "pagePath": "pages/myActivity/myActivity",
-        "iconPath": "pages/image/contact.png",
-        "selectedIconPath": "pages/image/contact.png",
+        "iconPath": "pages/image/kaipiao.png",
+        "selectedIconPath": "pages/image/kaipiao.png",
         "text": "我的活动"
       },
       {
         "pagePath": "pages/Me/index",
-        "iconPath": "pages/image/contact.png",
-        "selectedIconPath": "pages/image/contact.png",
+        "iconPath": "pages/image/yonghu.png",
+        "selectedIconPath": "pages/image/yonghu.png",
         "text": "我"
       }
     ]
