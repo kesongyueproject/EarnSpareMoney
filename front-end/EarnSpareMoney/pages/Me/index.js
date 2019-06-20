@@ -16,7 +16,7 @@ Page({
   getData:function(){
     var that = this
     wx.request({
-      url: 'http://happyzhier.club:3000/user?uid=test',
+      url: 'http://happyzhier.club:3000/user?uid='+app.globalData.username,
       method: 'GET',
       success: function (res) {
         console.log('Me part data check')

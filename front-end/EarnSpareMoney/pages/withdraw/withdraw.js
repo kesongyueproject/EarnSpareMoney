@@ -1,5 +1,6 @@
 // pages/withdraw/withdraw.js
 // pages/topUp/topUp.js
+const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -20,7 +21,7 @@ Page({
   getData: function () {
     var that = this
     wx.request({
-      url: 'http://happyzhier.club:3000/user?uid=test',
+      url: 'http://happyzhier.club:3000/user?uid=' + app.globalData.username,
       method: 'GET',
       success: function (res) {
         console.log('money check')
@@ -84,7 +85,7 @@ Page({
         var m = parseInt(this.data.money)
         console.log(m-mm)
         wx.request({
-          url: 'http://happyzhier.club:3000/user?uid=test',
+          url: 'http://happyzhier.club:3000/user?uid=' + app.globalData.username,
           method: 'POST',
           data: {
             uid: this.data.uid,
