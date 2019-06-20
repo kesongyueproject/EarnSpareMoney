@@ -99,7 +99,8 @@
   height: 60rpx;
   width: 100%;
 }
-.-cell_input_1{
+
+.-cell_input_2{
   position: absolute;
   top: 120rpx;
   left: 0rpx;
@@ -109,19 +110,9 @@
   height: 60rpx;
   width: 100%;
 }
-.-cell_input_2{
-  position: absolute;
-  top: 180rpx;
-  left: 0rpx;
-  padding-top:0;
-  padding-bottom:0;
-  border-bottom: 1px solid rgb(241, 239, 239);
-  height: 60rpx;
-  width: 100%;
-}
 .-cell_input_3{
   position: absolute;
-  top: 240rpx;
+  top: 180rpx;
   left: 0rpx;
   padding-top:0;
   padding-bottom:0;
@@ -156,14 +147,14 @@
 }
 .confirmBut{
   position: absolute;
-  top:1360rpx;
+  top:1300rpx;
   width: 80%;
   height: 50rpx;
   margin-bottom: 100rpx;
 }
 .tasks{
   position: absolute;
-  top: 320rpx;
+  top: 260rpx;
   left: 30rpx;
 }
 .tasksType{
@@ -177,7 +168,7 @@
 }
 .Desc{
   position: absolute;
-  top: 690rpx;
+  top: 630rpx;
   height: 380rpx;
   width: 100%;
   border-top: 1px solid rgb(241, 239, 239);
@@ -194,7 +185,7 @@
 }
 .picture{
   position: absolute;
-  top: 1090rpx;
+  top: 1030rpx;
   left: 30rpx;
 }
 .-cells_after-title{
