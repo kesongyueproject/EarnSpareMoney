@@ -7,8 +7,8 @@ Page({
     signature:'',
     tel:'',
     school:'',
-    money:'0',
-    credit:'80',
+    money:0,
+    credit:80,
     img_url: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1794684000,4038363876&fm=11&gp=0.jpg',
     passwd_conf:''
   },

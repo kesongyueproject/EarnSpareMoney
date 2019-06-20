@@ -3,5 +3,14 @@
 const app = getApp()
 
 Page({
-
+  myTasks: function(){
+    wx.switchTab({
+      url: '/pages/myActivity/myActivity',
+    })
+  },
+  backRegis:function(){
+    wx.switchTab({
+      url: '/pages/releaseTask/releaseTask',
+    })
+  }
 })
