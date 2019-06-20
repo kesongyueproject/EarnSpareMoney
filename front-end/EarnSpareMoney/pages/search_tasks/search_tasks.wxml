@@ -11,10 +11,10 @@
     <swiper-item>  
       <view class='all_tasks_list'>
         <view class='item' wx:for="{{taskList0}}" wx:key="{{index}}" data-index="{{index}}" bindtap='getItemInfo'>
-          <image class='img' src='{{item.img}}'></image>
+          <image class='img' src='{{item.imgs_url}}'></image>
           <view class='info'>
             <text class='title'>{{item.title}}</text>
-            <text class='description'>{{item.description}}</text>
+            <text class='description mui-ellipsis-2'>{{item.description}}</text>
           </view>
         </view>
       </view>  
@@ -24,10 +24,10 @@
     <swiper-item>  
       <view class='question_list'>
         <view class='item' wx:for="{{taskList1}}" wx:key="{{index}}" data-index="{{index}}" bindtap='getItemInfo'>
-          <image class='img' src='{{item.img}}'></image>
+          <image class='img' src='{{item.imgs_url}}'></image>
           <view class='info'>
             <text class='title'>{{item.title}}</text>
-            <text class='description'>{{item.description}}</text>
+            <text class='description mui-ellipsis-2'>{{item.description}}</text>
           </view>
         </view>
       </view> 
@@ -37,10 +37,10 @@
     <swiper-item>  
       <view class='activity_list'>
         <view class='item' wx:for="{{taskList2}}" wx:key="{{index}}" data-index="{{index}}" bindtap='getItemInfo'>
-          <image class='img' src='{{item.img}}'></image>
+          <image class='img' src='{{item.imgs_url}}'></image>
           <view class='info'>
             <text class='title'>{{item.title}}</text>
-            <text class='description'>{{item.description}}</text>
+            <text class='description mui-ellipsis-2'>{{item.description}}</text>
           </view>
         </view>
       </view>  
@@ -50,10 +50,10 @@
     <swiper-item>  
       <view class='errand_list'>
         <view class='item' wx:for="{{taskList3}}" wx:key="{{index}}" data-index="{{index}}" bindtap='getItemInfo'>
-          <image class='img' src='{{item.img}}'></image>
+          <image class='img' src='{{item.imgs_url}}'></image>
           <view class='info'>
             <text class='title'>{{item.title}}</text>
-            <text class='description'>{{item.description}}</text>
+            <text class='description mui-ellipsis-2'>{{item.description}}</text>
           </view>
         </view>
       </view>  

@@ -1,4 +1,5 @@
 // pages/login/login.js
+var app = getApp();
 Page({
   data:{
     userName:'',
@@ -29,6 +30,7 @@ Page({
       success: function (res) {
         console.log(res.data.msg);
         if(res.data.msg == "success") {
+          app.globalData.username = that.data.userName;
           wx.switchTab({
             url: '/pages/search_tasks/search_tasks',
           })

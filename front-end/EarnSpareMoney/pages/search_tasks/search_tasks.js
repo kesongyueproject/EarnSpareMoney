@@ -31,33 +31,45 @@ Page({
       },
     })
 
-    var list0 = [
-      { img: "https://ossweb-img.qq.com/images/lol/img/spell/YasuoQ1Wrapper.png", title: "斩钢闪", description: "向前出剑，造成20/45/70/95/120(+1)物理伤害。" },
-      { img: "https://ossweb-img.qq.com/images/lol/img/spell/YasuoW.png", title: "风之障壁", description: "形成一个持续4秒的气流之墙，来阻挡敌方的飞行道具。" },
-      { img: "https://ossweb-img.qq.com/images/lol/img/spell/YasuoE.png", title: "踏前斩", description: "向目标敌人突进，造成60/70/80/90/100魔法伤害。" }];
+    var list0 = [], list1 = [], list2 = [];
 
-    that.setData({
-      taskList0: list0
-    });
+    wx.request({
+      url: 'http://happyzhier.club:3000/missions',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data);
+        var len = res.data.count;
+        for (var i = 0; i < len; i++) {
+          list0.push(res.data.data[i]);
+          switch (res.data.data[i].mtype) {
+            case "questionnaire":
+              list1.push(res.data.data[i]);
+              break;
+            case "other":
+              list2.push(res.data.data[i]);
+              break;
+            default:
+              break;
+          }
+        }
+        that.setData({
+          taskList0: list0,
+          taskList1: list1,
+          taskList2: list2
+        });
+      }
+    })
   },
 
   bindChange: function (e) {
     var that = this;
-    var list = that.data.taskList0;
+    //var list = that.data.taskList0;
     that.setData({
       currentTab: e.detail.current,
     })
-    switch (e.detail.current) {
-      case 1:
-        if (that.data.taskList1.length == 0) {
-          that.setData({
-            taskList1: list,
-          })
-        }
-        break;
-      default:
-        break;
-    }
   },
 
   swichNav: function (e) {
@@ -69,24 +81,13 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
-    switch (e.target.dataset.current) {
-      case 1:
-        if (that.data.taskList1.length == 0) {
-          that.setData({
-            taskList1: list,
-          })
-        }
-        break;
-      default:
-        break;
-    }
   },
 
   getItemInfo: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
-    var title = this.data.taskList0[index].title;
+    var mid = this.data.taskList0[index].mid;
     wx.navigateTo({
-      url: '../item_info/item_info?title=' + title,
+      url: '../item_info/item_info?mid=' + mid,
     })
   },
 

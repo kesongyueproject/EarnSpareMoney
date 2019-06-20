@@ -6,9 +6,9 @@ const app = getApp()
 Page({
   data: {
     radioItems: [
-      { name: 'cell standard', value: '0', checked: "true"},
-      { name: 'cell standard', value: '1'},
-      { name: 'cell standard', value: '2'},
+      { name: '问卷', value: '0', checked: "true"},
+      { name: '活动', value: '1'},
+      { name: '跑腿', value: '2'},
     ],
     images: [],
     biaoti : '',
@@ -108,24 +108,38 @@ Page({
   },
   confirm: function(){
     var that = this;
-    wx.request({
-      url: 'https://happyzhier.club/mission',
-      data:{
-        publisher: that.data.faburen,
+    if (that.data.radioItems[0].checked){
+      var myQuestionnaire = {
         title: that.data.biaoti,
-        details: that.data.miaoshu,
-        reward: that.data.baochou
-      },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      method: 'PUT',
-      success: function (res) {
-        console.log("success");
-      },
-      fail: function (res) {
-        console.log("fail");
+        icon: that.data.tubiao,
+        reward: 1,
+        people_limit: 100,
+        description: that.data.miaoshu
       }
-    })
+      let myQuestionnaireStr = JSON.stringify(myQuestionnaire);
+      wx.navigateTo({
+        url: '../questionnaire/questionnaire?questionnaire=' + myQuestionnaireStr
+      })
+    }else{
+      wx.request({
+        url: 'https://happyzhier.club/mission',
+        data: {
+          publisher: that.data.faburen,
+          title: that.data.biaoti,
+          details: that.data.miaoshu,
+          reward: that.data.baochou
+        },
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        method: 'PUT',
+        success: function (res) {
+          console.log("success");
+        },
+        fail: function (res) {
+          console.log("fail");
+        }
+      })
+    }
   }
 })
