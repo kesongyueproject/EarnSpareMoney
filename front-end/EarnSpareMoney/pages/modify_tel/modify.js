@@ -1,82 +1,109 @@
 // pages/modify_tel/modify.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    nickname: '',
+    uid: '',
+    passwd: '',
+    signature: '',
+    img_url: '',
+    tel: '',
+    school: '',
+    money: '',
+    credit: ''
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getData: function () {
+    var that = this
+    wx.request({
+      url: 'http://happyzhier.club:3000/user?uid=test',
+      method: 'GET',
+      success: function (res) {
+        console.log('tel check')
+        console.log(res.data.userInfo.tel)
+        that.setData({
+          nickname: res.data.userInfo.nickname,
+          uid: res.data.userInfo.uid,
+          passwd: res.data.userInfo.passwd,
+          signature: res.data.userInfo.signature,
+          img_url: res.data.userInfo.img_url,
+          tel: res.data.userInfo.tel,
+          school: res.data.userInfo.school,
+          money: res.data.userInfo.money,
+          credit: res.data.userInfo.credit
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getData()
+  },
+
+  inputvalue: function (e) {
+    this.setData({
+      tel: e.detail.value
+    })
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  openLoading: function () {
-    wx.showToast({
-      title: '',
-      icon: 'loading',
-      duration: 3000
-    });
+  post: function () {
+    if (!(/^1[3456789]\d{9}$/.test(this.data.tel))) {
+      wx.showModal({
+        content: '操作失败，联系方式应该是11位数字',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      });
+      return false;
+    } 
     wx.request({
-      url: 'https://happyzhier.club/mission?mid=123456',
-      method: 'GET',
+      url: 'http://happyzhier.club:3000/user?uid=test',
+      method: 'POST',
+      data: {
+        uid: this.data.uid,
+        passwd: this.data.passwd,
+        nickname: this.data.nickname,
+        signature: this.data.signature,
+        img_url: this.data.img_url,
+        tel: this.data.tel,
+        school: this.data.school,
+        money: this.data.money,
+        credit: this.data.credit
+      },
       success: function (res) {
-        console.log(res.data)
+        if (res.data.msg == 'success') {
+          wx.showToast({
+            title: '已完成',
+            icon: 'success',
+            duration: 1000
+          });
+        } else {
+          wx.showToast({
+            title: '修改失败',
+            icon: 'warn',
+            duration: 1000
+          });
+        }
       },
       fail: function (err) {
         console.log(err)
+        wx.showToast({
+          title: '修改失败',
+          icon: 'warn',
+          duration: 1000
+        });
       }
     })
   }
