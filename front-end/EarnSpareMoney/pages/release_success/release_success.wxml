@@ -9,8 +9,8 @@
         </view>
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary">查看我的发布</button>
-                <button class="weui-btn" type="default">返回</button>
+                <button class="weui-btn" type="primary" bindtap='myTasks'>查看任务</button>
+                <button class="weui-btn" type="default" bindtap='backRegis'>返回</button>
             </view>
         </view>
     </view>

@@ -12,6 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: 'https://happyzhier.club/mission?mid=123456',
+      method:'GET',
+      success:function(res){
+        console.log(res.data)
+      },
+      fail:function(err){
+        console.log(err)
+      }
+    })
 
   },
 

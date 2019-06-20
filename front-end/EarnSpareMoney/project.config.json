@@ -9,16 +9,19 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.1",
-	"appid": "wxdbb6eed871d3f7f0",
-	"projectname": "2",
+	"libVersion": "2.7.0",
+	"appid": "wx824f27e1d85ea9be",
+	"projectname": "miniprogram-test-3",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

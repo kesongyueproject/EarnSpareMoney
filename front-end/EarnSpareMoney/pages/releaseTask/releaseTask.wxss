@@ -1,29 +1,26 @@
-
 .-uploader__title{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
   color:#999;
   font-size:30rpx;
-  padding-bottom: 10rpx;
+  padding-bottom: 5rpx;
 }
 .-uploader__file{
   float:left;
-  margin-right:9rpx;
-  margin-bottom:9rpx;
+  margin-right:10rpx;
+  margin-bottom:10rpx;
 }
 .-uploader__img{
   display:block;
   width:150rpx;
   height:150rpx;
-  margin-left: 40rpx;
 }
 .-uploader__input-box{
   float:left;
   position:relative;
-  margin-right:9rpx;
-  margin-left: 40rpx;
-  margin-bottom:9rpx;
+  margin-right:10rpx;
+  margin-bottom:10rpx;
   width:148rpx;
   height:148rpx;
   border:1px solid #d9d9d9;
@@ -38,12 +35,12 @@
   background-color:#d9d9d9;
 }
 .-uploader__input-box:before{
-  width:2px;
-  height:120rpx;
+  width:2rpx;
+  height:80rpx;
 }
 .-uploader__input-box:after{
-  width:120rpx;
-  height:2px;
+  width:80rpx;
+  height:2rpx;
 }
 .-uploader__input-box:active{
   border-color:#999;
@@ -62,8 +59,8 @@
 }
 .-cells__title{
   position: absolute;
-  top: 20rpx;
-  left: 25rpx;
+  top: 10rpx;
+  left: 30rpx;
   color:#999;
   font-size:30rpx;
 }
@@ -73,7 +70,7 @@
 }
 
 .-cell{
-  padding:20rpx 30rpx;
+  padding:10px 15px;
   position:relative;
   display:-webkit-box;
   display:-webkit-flex;
@@ -84,6 +81,7 @@
 }
 
 .-cells{
+  position:relative;
   margin-top:1.17647059em;
   background-color:#fff;
   line-height:1.41176471;
@@ -93,57 +91,63 @@
 .-cell_input{
   position: absolute;
   top: 60rpx;
-  left: 0;
-  margin-top:10rpx;
-  margin-bottom:0;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
   border-top: 1px solid rgb(241, 239, 239);
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 40rpx;
-  width: 750rpx;
+  height: 60rpx;
+  width: 100%;
 }
-
 .-cell_input_1{
   position: absolute;
-  top: 140rpx;
-  left: 0;
-  margin-top:10rpx;
-  margin-bottom:0;
+  top: 120rpx;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 40rpx;
-  width: 750rpx;
+  height: 60rpx;
+  width: 100%;
 }
 .-cell_input_2{
   position: absolute;
-  top: 220rpx;
-  left: 0;
-  margin-top:10rpx;
-  margin-bottom:0;
+  top: 180rpx;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 40rpx;
-  width: 750rpx;
+  height: 60rpx;
+  width: 100%;
 }
-
+.-cell_input_3{
+  position: absolute;
+  top: 240rpx;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 60rpx;
+  width: 100%;
+}
 .-label{
-  width:200rpx;
+  width:170rpx;
+  font-size: 30rpx;
   word-wrap:break-word;
   word-break:break-all;
-  font-size: 40rpx;
 }
 
 .-input{
-  height:2.58823529em;
-  min-height:2.58823529em;
-  line-height:2.58823529em;
   font-size: 30rpx;
-  width:90%;
+  color: gray;
 }
 
 .-cell__bd{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
-  padding-left: 20rpx;
+  padding-left: 30rpx;
   font-size: 30rpx;
+  color: gray;
 }
 
 .-cell__ft{
@@ -152,56 +156,57 @@
 }
 .confirmBut{
   position: absolute;
-  top:1340rpx;
-  height: 30rpx;
+  top:1360rpx;
   width: 80%;
+  height: 50rpx;
   margin-bottom: 100rpx;
 }
 .tasks{
   position: absolute;
-  top: 330rpx;
-  left: 20rpx;
+  top: 320rpx;
+  left: 30rpx;
 }
 .tasksType{
   color:#999;
   font-size:30rpx;
 }
 .-icon-radio{
-  position: relative;
-  left: 300rpx;
-
+  position: absolute;
+  left: 600rpx;
+  top:30rpx;
+}
+.Desc{
+  position: absolute;
+  top: 690rpx;
+  height: 380rpx;
+  width: 100%;
+  border-top: 1px solid rgb(241, 239, 239);
+  border-bottom: 1px solid rgb(241, 239, 239);
 }
 .taskDes{
-  position: absolute;
-  top: 680rpx;
-  left: 20rpx;
-  margin-bottom: 5rpx;
   color:#999;
   font-size:30rpx;
+  position: relative;
+  left: 30rpx;
+}
+.description{
+  width:750rpx;
 }
 .picture{
   position: absolute;
-  top: 960rpx;
-  left: 20rpx;
+  top: 1090rpx;
+  left: 30rpx;
 }
 .-cells_after-title{
   position: absolute;
-  top: 680rpx;
-  left: 0;
-  width: 100%;
+  top: 230px;
 }
 .-textarea{
-  border-top: 1px solid rgb(241, 239, 239);
-  border-bottom: 1px solid rgb(241, 239, 239);
   background-color: rgb(243, 243, 243);
   font-size: 30rpx;
-  position: absolute;
-  top: 730rpx;
-  left: 30rpx;
-  width: 690rpx;
-  height: 200rpx;
-}
-
-.description{
   height: 300rpx;
+  width: 90%;
+  position: relative;
+  left: 40rpx;
+  color: gray;
 }

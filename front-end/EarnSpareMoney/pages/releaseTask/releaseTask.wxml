@@ -13,7 +13,7 @@
       <view class="-label">发布人：</view>
     </view>
     <view class="-cell__bd">
-      <input class="-input" placeholder="请输入名字" bindinput='input_faburen'/>
+      <input class="-input" placeholder="请输入用户名" bindinput='input_faburen'/>
     </view>
   </view>
   <view class='-cell -cell_input_2'>
@@ -24,7 +24,15 @@
       <input class="-input" placeholder="请输入报酬（人民币/元）" bindinput='input_baochou'/>
     </view>
   </view>
- <view class='tasks'>
+  <view class='-cell -cell_input_3'>
+    <view class="-cell__hd">
+      <view class="-label">任务数量：</view>
+    </view>
+    <view class="-cell__bd">
+      <input class="-input" placeholder="请输入任务数量" bindinput='taskNum'/>
+    </view>
+  </view>
+  <view class='tasks'>
     <view class='tasksType'>任务类别</view>
     <radio-group bindchange="radioChange">
       <label class="-cell -check__label" wx:for="{{radioItems}}" wx:key="value">
@@ -36,14 +44,10 @@
       </label>
     </radio-group>
   </view>
-  <view class='description'>
+  <view class='Desc'>
     <view class="taskDes">任务描述</view>
-    <view class="cells cells_after-title">
-      <view class="cell">
-        <view class="cell__bd">
-          <textarea class="-textarea" placeholder="请描述任务" bindinput='input_miaoshu'/>
-        </view>
-      </view>
+    <view class="description">
+      <textarea class="-textarea" placeholder="请描述任务" bindinput='input_miaoshu'/>
     </view>
   </view>
   <view class='picture'>
