@@ -1,66 +1,45 @@
 // pages/self_info/self_info.js
+const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    img_url:'',
+    uid:'',
+    nickname:'',
+    signature:'',
+    school:'',
+    tel:'',
+    credit:''
   },
-
+  getData: function(){
+    var that = this
+    wx.request({
+      url: 'http://happyzhier.club:3000/user?uid='+app.globalData.username,
+      method: 'GET',
+      success: function (res) {
+        console.log('self_info data check')
+        console.log(res.data)
+        that.setData({
+          img_url: res.data.userInfo.img_url,
+          uid: res.data.userInfo.uid,
+          nickname: res.data.userInfo.nickname,
+          signature: res.data.userInfo.signature,
+          school: res.data.userInfo.school,
+          tel: res.data.userInfo.tel,
+          credit: res.data.userInfo.credit
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })   
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShow: function (options) {
+    this.getData()
   }
 })

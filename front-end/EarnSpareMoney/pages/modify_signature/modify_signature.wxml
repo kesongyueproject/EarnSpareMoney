@@ -1,13 +1,14 @@
 <!--pages/modify/modify.wxml-->
 <view class="weui-cells__title">个性签名</view>
 <view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell weui-cell_input">
+  <view class="weui-cell">
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="我喜欢唱跳rap篮球" />
+      <textarea class="weui-textarea" value="{{signature}}" bindinput="inputvalue"  style="height: 3.3em" />
+      <view class="weui-textarea-counter">50字以内</view>
     </view>
   </view>
 </view>
 
 <view class='right'>
-  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="openLoading">完成</button>
+  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="post">完成</button>
 </view>
