@@ -1,0 +1,20 @@
+/* pages/balance/balance.wxss */
+.middle{
+  display:flex;
+  justify-content:center;
+}
+.inline{
+  vertical-align: top;
+  display: inline-block;
+}
+.space{
+  height: 130px;
+}
+.space2{
+  height: 10px;
+}
+.bbtn{
+  height: 40px;
+  width: 200px;
+  font-size: 15px;
+}

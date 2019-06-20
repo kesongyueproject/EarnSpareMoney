@@ -54,11 +54,11 @@
   flex-direction:column;
 }
 
-.name{
+.publisher{
   font-size: 14px;
 }
 
-.digest{
+.introduction{
   font-size: 12px;
   color: gray;
   margin-top: 5rpx;

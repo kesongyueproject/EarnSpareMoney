@@ -14,7 +14,6 @@
     "pages/release_success/release_success",
     "pages/Me/index",
     "pages/self_info/self_info",
-    "pages/notice/notices",
     "pages/modify_tel/modify",
     "pages/modify_school/modify",
     "pages/credit_intro/credit_intro",
@@ -23,7 +22,11 @@
     "pages/msg_success/msg_success",
     "pages/myActivity/allActivity",
     "pages/modify_signature/modify_signature",
-    "pages/modify_nickname/modify_nickname"
+    "pages/modify_nickname/modify_nickname",
+    "pages/questionnaire/questionnaire",
+    "pages/balance/balance",
+    "pages/topUp/topUp",
+    "pages/withdraw/withdraw"
   ],
   "window": {
     "backgroundTextStyle": "light",

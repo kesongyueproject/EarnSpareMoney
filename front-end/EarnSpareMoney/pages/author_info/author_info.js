@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1557235922&di=e2544265b24e43ffda7b6cdb60d8ef31&src=http://img.weixinyidu.com/160318/c0375fe2.jpg",
-    name: "zed",
-    wechat: "hasaki",
+    img: "",
+    name: "name",
+    wechat: "wechatID",
     school: "中山大学",
     phone: "12345678910",
     credit: "99"
@@ -17,8 +17,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
+    var that = this;
+
+    that.setData({
       name: options.name
+    })
+
+    wx.request({
+      url: 'http://happyzhier.club:3000/user?uid=' + that.data.name,
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          img: res.data.userInfo.img_url,
+          name: res.data.userInfo.nickname,
+          wechat: res.data.userInfo.uid,
+          school: res.data.userInfo.school,
+          phone: res.data.userInfo.tel,
+          credit: res.data.userInfo.credit
+        })
+      }
     })
   },
 

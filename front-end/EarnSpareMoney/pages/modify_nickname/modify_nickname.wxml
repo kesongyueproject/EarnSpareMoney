@@ -3,11 +3,11 @@
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="我喜欢唱跳rap篮球" />
+      <input class="weui-input" bindinput='inputvalue'  value='{{nickname}}'></input>
     </view>
   </view>
 </view>
 
 <view class='right'>
-  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="openLoading">完成</button>
+  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="post">完成</button>
 </view>

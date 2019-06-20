@@ -5,25 +5,61 @@ Page({
    * 页面的初始数据
    */
   data: {
+    mid: "0",
+    uid: "xxx",
     title: "taskName",
-    name: "yasuo",
-    digest: "死亡如风，常伴吾身。",
-    img: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1557235922&di=e2544265b24e43ffda7b6cdb60d8ef31&src=http://img.weixinyidu.com/160318/c0375fe2.jpg",
-    description: "向前出剑，造成20/45/70/95/120(+1),如果在突进的过程中施放斩钢闪，那么斩钢闪就会呈环状出剑。"
+    nickname: "",
+    introduction: "introduction",
+    img_url: "",
+    description: "description"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     this.setData({
-      title: options.title
+      mid: options.mid
+    })
+
+    wx.request({
+      url: 'http://happyzhier.club:3000/mission',
+      data: { mid: that.data.mid },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          uid: res.data.uid,
+          title: res.data.title,
+          description: res.data.description
+        })
+
+        wx.request({
+          url: 'http://happyzhier.club:3000/user?uid=' + that.data.uid,
+          method: 'GET',
+          header: {
+            'content-type': 'application/json'
+          },
+          success: function (res) {
+            console.log(res.data);
+            that.setData({
+              nickname: res.data.userInfo.nickname,
+              introduction: res.data.userInfo.signature,
+              img_url: res.data.userInfo.img_url
+            })
+          }
+        })
+      }
     })
   },
 
   getAuthorInfo: function () {
     wx.navigateTo({
-      url: '../author_info/author_info?name=' + this.data.name,
+      url: '../author_info/author_info?name=' + this.data.uid,
     })
   },
 

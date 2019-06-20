@@ -1,0 +1,25 @@
+<!--pages/balance/balance.wxml-->
+<view class='middle'>
+  <image src='/pages/image/balance.png'  style="width: 50px; height: 50px;"/>
+</view>
+<view class='middle'>
+  <text>余额</text>
+</view>
+
+<view class='middle' style='font-size:40px ;font-weight:border;'>
+<view class='inline'>
+<image src='/pages/image/coin.png'  style="width: 25px; height: 25px;" /><text>{{balance}}</text>
+</view>
+</view>
+<view class='space'></view>
+<navigator url="/pages/topUp/topUp">
+<button class="weui-btn bbtn" type="primary">充值</button>
+</navigator>
+<view class='space2'></view>
+<navigator url="/pages/withdraw/withdraw">
+<button class="weui-btn bbtn" type="default">提现</button>
+</navigator>
+         
+            
+           
+
