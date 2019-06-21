@@ -6,15 +6,9 @@ const app = getApp()
 Page({
   data: {
     radioItems: [
-<<<<<<< HEAD
-      { name: '跑腿', value: '0', checked: "true"},
-      { name: '调查问卷', value: '1'},
-      { name: '其他', value: '2'},
-=======
       { name: '问卷', value: '0', checked: "true"},
       { name: '活动', value: '1'},
-      { name: '跑腿', value: '2'},
->>>>>>> upstream/master
+      { name: '跑腿', value: '2'}
     ],
     mid: 0,
     images: [],
@@ -105,9 +99,8 @@ Page({
   },
   confirm:function(){
     var that = this;
-<<<<<<< HEAD
     var num = /^[0-9]*$/;
-    if (!num.test(that.data.baochou) || that.data.baochou == '' || that.data.biaoti == '' || that.data.faburen == '' || that.data.task_num == '' || !num.test(that.data.task_num) || that.data.miaoshu == ''){
+    if (!num.test(that.data.baochou) || that.data.baochou == '' || that.data.biaoti == '' || that.data.task_num == '' || !num.test(that.data.task_num) || that.data.miaoshu == ''){
       wx.showModal({
         content: '输入有误，请重新输入相关信息！',
         showCancel: false,
@@ -125,65 +118,48 @@ Page({
           temp = that.data.radioItems[i].name;
         }
       }
-      wx.request({
-        url: 'http://happyzhier.club:3000/mission',
-        data: {
+      if(temp == "问卷"){
+        var myQuestionnaire = {
           title: that.data.biaoti,
-          uid: that.data.faburen,
-          reward: that.data.baochou,
-          mtype: temp,
-          description: that.data.miaoshu,
-          imgs_url: that.data.img_url,
-          people_limit: that.data.task_num,
-          people: that.data.people,
-          ing: that.data.ing
-=======
-    if (that.data.radioItems[0].checked){
-      var myQuestionnaire = {
-        title: that.data.biaoti,
-        icon: that.data.tubiao,
-        reward: 1,
-        people_limit: 100,
-        description: that.data.miaoshu
-      }
-      let myQuestionnaireStr = JSON.stringify(myQuestionnaire);
-      wx.navigateTo({
-        url: '../questionnaire/questionnaire?questionnaire=' + myQuestionnaireStr
-      })
-    }else{
-      wx.request({
-        url: 'https://happyzhier.club/mission',
-        data: {
-          publisher: that.data.faburen,
-          title: that.data.biaoti,
-          details: that.data.miaoshu,
-          reward: that.data.baochou
->>>>>>> upstream/master
-        },
-        header: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-<<<<<<< HEAD
-        method: 'POST',
-        success: function (res) {
-          console.log(res);
-          wx.navigateTo({
-            url: '/pages/release_success/release_success',
-          })
-=======
-        method: 'PUT',
-        success: function (res) {
-          console.log("success");
->>>>>>> upstream/master
-        },
-        fail: function (res) {
-          console.log("fail");
+          icon: that.data.tubiao,
+          reward: 1,
+          people_limit: 100,
+          description: that.data.miaoshu
         }
-<<<<<<< HEAD
-      });
-=======
-      })
->>>>>>> upstream/master
+        let myQuestionnaireStr = JSON.stringify(myQuestionnaire);
+        wx.navigateTo({
+          url: '../questionnaire/questionnaire?questionnaire=' + myQuestionnaireStr
+        })
+      }
+      else{
+        wx.request({
+          url: 'http://happyzhier.club:3000/mission',
+          data: {
+            title: that.data.biaoti,
+            uid: that.data.faburen,
+            reward: that.data.baochou,
+            mtype: temp,
+            description: that.data.miaoshu,
+            imgs_url: that.data.img_url,
+            people_limit: that.data.task_num,
+            people: that.data.people,
+            ing: that.data.ing
+          },
+          header: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          method: 'POST',
+          success: function (res) {
+            console.log(res);
+            wx.navigateTo({
+              url: '/pages/release_success/release_success',
+            })
+          },
+          fail: function (res) {
+            console.log("fail");
+          }
+        });
+      }
     }
   }
 })
