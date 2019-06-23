@@ -22,4 +22,4 @@
     </view>
 </view>
 
-<button class="weui-btn btn" type="warn" bindtap="onClick">取消</button>
+<button class="weui-btn btn" type="warn" bindtap="onClick" disabled="{{mtype=='joinEnd' || mtype=='publishEnd'}}">{{cancel}}</button>
