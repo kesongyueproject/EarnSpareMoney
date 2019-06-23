@@ -16,24 +16,13 @@ Page({
       options: [{ name: "修炼爱情" }, { name: "江南" }, { name: "背对背拥抱" }, { name: "一千年以后" }]
     }],
 
-    essayQuestions: [{ type: "问答", subject: "幼稚园杀手" }],
-
     hiddenSelectQuestion: true,
-    hiddenEssayQuestion: true,
     questionType: 2,
-    newEssaySubject: "",
     newSelectSubject: "",
     numOfNewOptions: 2,
     newOptions: [{ name: "" }, { name: "" }],
     detailOfQuestion: {}
   },
-
-  //获取新添加的简答题的题目
-  /*newEssaySubject: function (e) {
-    this.setData({
-      newEssaySubject: e.detail.value
-    })
-  },*/
 
   //获取新添加的选择题的题目
   newSelectSubject: function (e) {
@@ -92,10 +81,8 @@ Page({
   //取消添加问题
   cancel: function () {
     this.setData({
-      hiddenEssayQuestion: true,
       hiddenSelectQuestion: true,
       questionType: 2,
-      newEssaySubject: "",
       newSelectSubject: "",
       numOfNewOptions: 2,
       newOptions: [{ name: "" }, { name: "" }]
@@ -124,23 +111,11 @@ Page({
       that.setData({
         multipleSelectQuestions: newQuestions
       })
-
-    } 
-    /*else if (this.data.questionType == 2) {
-      var newSubject = that.data.newEssaySubject;
-      var newQuestions = that.data.essayQuestions;
-      var newQuestion = { type: "问答", subject: newSubject };
-      newQuestions.push(newQuestion);
-      that.setData({
-        essayQuestions: newQuestions
-      })
-    }*/
+    }
 
     that.setData({
-      hiddenEssayQuestion: true,
       hiddenSelectQuestion: true,
       questionType: 2,
-      newEssaySubject: "",
       newSelectSubject: "",
       numOfNewOptions: 2,
       newOptions: [{ name: "" }, { name: "" }]

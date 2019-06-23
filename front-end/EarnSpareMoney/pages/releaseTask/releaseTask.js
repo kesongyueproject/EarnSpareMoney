@@ -121,9 +121,9 @@ Page({
       if(temp == "问卷"){
         var myQuestionnaire = {
           title: that.data.biaoti,
-          icon: that.data.tubiao,
-          reward: 1,
-          people_limit: 100,
+          icon: that.data.img_url,
+          reward: that.data.baochou,
+          people_limit: that.data.task_num,
           description: that.data.miaoshu
         }
         let myQuestionnaireStr = JSON.stringify(myQuestionnaire);
