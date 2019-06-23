@@ -1,32 +1,28 @@
-page{
-  background-color: #EDEDED;
-}
-
 .-uploader__title{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
   color:#999;
-  font-size:15px;
-  padding-bottom: 5px;
+  font-size:30rpx;
+  padding-bottom: 5rpx;
 }
 .-uploader__file{
   float:left;
-  margin-right:9px;
-  margin-bottom:9px;
+  margin-right:10rpx;
+  margin-bottom:10rpx;
 }
 .-uploader__img{
   display:block;
-  width:79px;
-  height:79px;
+  width:150rpx;
+  height:150rpx;
 }
 .-uploader__input-box{
   float:left;
   position:relative;
-  margin-right:9px;
-  margin-bottom:9px;
-  width:77px;
-  height:77px;
+  margin-right:10rpx;
+  margin-bottom:10rpx;
+  width:148rpx;
+  height:148rpx;
   border:1px solid #d9d9d9;
 }
 .-uploader__input-box:after,.-uploader__input-box:before{
@@ -39,12 +35,12 @@ page{
   background-color:#d9d9d9;
 }
 .-uploader__input-box:before{
-  width:2px;
-  height:39.5px;
+  width:2rpx;
+  height:80rpx;
 }
 .-uploader__input-box:after{
-  width:39.5px;
-  height:2px;
+  width:80rpx;
+  height:2rpx;
 }
 .-uploader__input-box:active{
   border-color:#999;
@@ -63,10 +59,10 @@ page{
 }
 .-cells__title{
   position: absolute;
-  top: 10px;
-  left: 15px;
+  top: 10rpx;
+  left: 30rpx;
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
 }
 
 .-cells_after-title{
@@ -94,32 +90,55 @@ page{
 
 .-cell_input{
   position: absolute;
-  top: 30px;
-  left: 2px;
+  top: 60rpx;
+  left: 0rpx;
   padding-top:0;
   padding-bottom:0;
   border-top: 1px solid rgb(241, 239, 239);
   border-bottom: 1px solid rgb(241, 239, 239);
-  height: 30px;
+  height: 60rpx;
+  width: 100%;
 }
 
+.-cell_input_2{
+  position: absolute;
+  top: 120rpx;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 60rpx;
+  width: 100%;
+}
+.-cell_input_3{
+  position: absolute;
+  top: 180rpx;
+  left: 0rpx;
+  padding-top:0;
+  padding-bottom:0;
+  border-bottom: 1px solid rgb(241, 239, 239);
+  height: 60rpx;
+  width: 100%;
+}
 .-label{
-  width:105px;
+  width:170rpx;
+  font-size: 30rpx;
   word-wrap:break-word;
   word-break:break-all;
 }
 
 .-input{
-  height:2.58823529em;
-  min-height:2.58823529em;
-  line-height:2.58823529em;
+  font-size: 30rpx;
+  color: gray;
 }
 
 .-cell__bd{
   -webkit-box-flex:1;
   -webkit-flex:1;
   flex:1;
-  padding-left: 10px;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: gray;
 }
 
 .-cell__ft{
@@ -128,43 +147,57 @@ page{
 }
 .confirmBut{
   position: absolute;
-  top:480px;
-  height: 30px;
+  top:1300rpx;
   width: 80%;
-  margin-bottom: 50px;
+  height: 50rpx;
+  margin-bottom: 100rpx;
 }
 .tasks{
   position: absolute;
-  top: 70px;
-  left: 15px;
+  top: 260rpx;
+  left: 30rpx;
 }
 .tasksType{
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
 }
 .-icon-radio{
-  position: relative;
-  left: 100px;
+  position: absolute;
+  left: 600rpx;
+  top:30rpx;
+}
+.Desc{
+  position: absolute;
+  top: 630rpx;
+  height: 380rpx;
+  width: 100%;
+  border-top: 1px solid rgb(241, 239, 239);
+  border-bottom: 1px solid rgb(241, 239, 239);
 }
 .taskDes{
-  position: absolute;
-  top: 230px;
-  left: 15px;
   color:#999;
-  font-size:15px;
+  font-size:30rpx;
+  position: relative;
+  left: 30rpx;
+}
+.description{
+  width:750rpx;
 }
 .picture{
   position: absolute;
-  top: 350px;
-  left: 15px;
+  top: 1030rpx;
+  left: 30rpx;
 }
 .-cells_after-title{
   position: absolute;
   top: 230px;
 }
 .-textarea{
-  border-top: 1px solid rgb(241, 239, 239);
-  border-bottom: 1px solid rgb(241, 239, 239);
   background-color: rgb(243, 243, 243);
-  font-size: 15px;
+  font-size: 30rpx;
+  height: 300rpx;
+  width: 90%;
+  position: relative;
+  left: 40rpx;
+  color: gray;
 }
