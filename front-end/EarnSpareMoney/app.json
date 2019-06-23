@@ -1,18 +1,19 @@
 {
   "pages": [
+    "pages/firstPage/firstPage",
     "pages/search_tasks/search_tasks",
     "pages/myActivity/myActivity",
     "pages/logs/logs",
     "pages/activityDetail/cancel_success",
     "pages/activityDetail/activityDetail",
     "pages/personal_info/personal_info",
-    "pages/register/register",
     "pages/operator_success/operator_success",
+    "pages/login/login",
+    "pages/register/register",
     "pages/releaseTask/releaseTask",
     "pages/release_success/release_success",
     "pages/Me/index",
     "pages/self_info/self_info",
-    "pages/notice/notices",
     "pages/modify_tel/modify",
     "pages/modify_school/modify",
     "pages/credit_intro/credit_intro",
@@ -21,7 +22,11 @@
     "pages/msg_success/msg_success",
     "pages/myActivity/allActivity",
     "pages/modify_signature/modify_signature",
-    "pages/modify_nickname/modify_nickname"
+    "pages/modify_nickname/modify_nickname",
+    "pages/questionnaire/questionnaire",
+    "pages/balance/balance",
+    "pages/topUp/topUp",
+    "pages/withdraw/withdraw"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,21 +1,63 @@
-<view class="container">
+<!--pages/register/register.wxml-->
+<view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">学校</view>
+      <view class="weui-label">*用户名：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入学校"/>
+      <input class="weui-input" placeholder="请输入用户名" bindinput='userName'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode">
     <view class="weui-cell__hd">
-      <view class="weui-label">联系电话</view>
+      <view class="weui-label">*密码：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入联系电话" />
+      <input class="weui-input" placeholder="请输入密码" password='*' bindinput='passWord'/>
     </view>
   </view>
-  <view class='confirm'>
-    <button class='confirm_but' type='primary' bindtap='openConfirm'>确认</button>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">*确认密码：</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="再输入密码" password='*' bindinput='passWord_confirm'/>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">*昵称：</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入昵称" bindinput='nickName'/>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">个性签名：</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入个性签名" bindinput='signature_'/>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">*电话：</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入联系电话" bindinput='phone_num'/>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">学校：</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入学校" bindinput='school_'/>
+    </view>
   </view>
 </view>
+<view>
+  <button class='zhuce' type='primary' bindtap='zhuce'>确认注册</button>
+</view>
+

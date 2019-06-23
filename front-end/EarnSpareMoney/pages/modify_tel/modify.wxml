@@ -3,10 +3,10 @@
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="18888888888" />
+      <input class="weui-input" value='{{tel}}' bindinput='inputvalue' />
     </view>
   </view>
 </view>
 <view class='right'>
-  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="openLoading">完成</button>
+  <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="post">完成</button>
 </view>

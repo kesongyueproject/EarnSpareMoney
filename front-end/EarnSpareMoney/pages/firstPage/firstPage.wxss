@@ -1,0 +1,31 @@
+
+.container{
+  margin-top: 50%;
+}
+.title{
+  position: absolute;
+  top: 20%;
+}
+.title_{
+  font-size: 100rpx;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}
+.bg_image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+}
+.login{
+  height: 30rpx;
+  width: 80%;
+}
+.regis{
+  height: 30rpx;
+  width: 80%;
+  margin-top:100rpx; 
+}
