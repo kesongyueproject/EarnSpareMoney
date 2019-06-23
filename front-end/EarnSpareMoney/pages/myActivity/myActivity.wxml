@@ -16,7 +16,7 @@
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
                         <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
-                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}" bindtap='onGoJoinIngDetail'>
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}"  data-type="joinIng" bindtap='onGoJoinIngDetail'>
                                 <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
@@ -25,8 +25,8 @@
                             </view>
                         </block>
 
-                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__bd weui-cell_primary my-activity-blue">
+                        <view hidden="{{activityJoinIng.length<=3}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-type="joinIng" bindtap='onGoMoreAcitivity'>
+                            <view class="weui-cell__bd weui-cell_primary my-activity-blue" >
                                 <view>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -41,8 +41,8 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
-                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <block wx:for="{{activityJoinEnd}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}"  data-type="joinEnd" bindtap='onGoJoinIngDetail'>
                                 <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
@@ -51,7 +51,7 @@
                             </view>
                         </block>
 
-                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view hidden="{{activityJoinEnd.length<=3}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-type="joinEnd" bindtap='onGoMoreAcitivity'>
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
                                 <view>查看更多</view>
                             </view>
@@ -69,8 +69,8 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
-                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <block wx:for="{{activityPublishIng}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}" data-type="publishIng" bindtap='onGoJoinIngDetail'>
                                 <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
@@ -79,7 +79,7 @@
                             </view>
                         </block>
 
-                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view hidden="{{activityPublishIng.length<=3}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-type="publishIng" bindtap='onGoMoreAcitivity'>
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
                                 <view>查看更多</view>
                             </view>
@@ -95,8 +95,8 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
                     <view class="weui-cells weui-cells_in-small-appmsg">
-                        <block wx:for="{{activityJoinIng}}" wx:key="title" wx:if="{{index<3}}">
-                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <block wx:for="{{activityPublishEnd}}" wx:key="title" wx:if="{{index<3}}">
+                            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-mid="{{item.mid}}"  data-type="publishEnd" bindtap='onGoJoinIngDetail'>
                                 <view class="weui-cell__hd"><image src="{{item.imgs_url}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                                 <view class="weui-cell__bd weui-cell_primary">
                                     <view>{{item.title}}</view>
@@ -105,9 +105,9 @@
                             </view>
                         </block>
 
-                        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                        <view hidden="{{activityPublishEnd.length<=3}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-type="publishEnd" bindtap='onGoMoreAcitivity'>
                             <view class="weui-cell__bd weui-cell_primary my-activity-blue">
-                                <view bindtap='publish_doing_more'>查看更多</view>
+                                <view>查看更多</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                         </view>

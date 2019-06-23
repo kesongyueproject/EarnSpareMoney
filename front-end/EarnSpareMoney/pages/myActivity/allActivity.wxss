@@ -1,1 +1,25 @@
 /* pages/myActivity/allActivity.wxss */
+page{
+  background-color: #EDEDED;
+}
+
+.navbar{
+  background-color: white;
+}
+
+.my-activity-red{
+  color: red;
+}
+
+.my-activity-green{
+  color: green
+}
+
+.my-activity-blue{
+  color:gray;
+  font-size: 12px;
+}
+
+.my-activity-background{
+  background-color: #EDEDED;
+}

@@ -10,8 +10,7 @@
         </view>
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary">返回上一级</button>
-              
+                <button class="weui-btn" type="primary" bindtap='goBack'>返回上一级</button>   
             </view>
         </view>
     </view>
