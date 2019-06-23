@@ -23,26 +23,13 @@
       </checkbox-group>
     </view>
 
-
-    <view class='essay_questions' wx:for="{{essayQuestions}}" wx:key="{{index}}" data-index="{{index}}">
-      <text class='question_subject'>{{item.subject}}({{item.type}})</text> 
-      <textarea class='essay_question_answer'></textarea>
-    </view>
-
-    <image class='add_question' src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3811511572,1846788934&fm=26&gp=0.jpg' bindtap='addQuestion'></image>
+    <image class='add_question' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561902676&di=01c4c1264c9acc5781f37db02848caba&imgtype=jpg&er=1&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F37%2F91%2F43573c6879927f2.jpg' bindtap='addQuestion'></image>
   </view>
-
 
   <view class='bottom'>
-    <button class='complete' type="primary">完成编辑</button>
+    <button class='complete' type="primary" bindtap='complete'>完成编辑</button>
   </view>
 </view>
-
-<!--
-<modal hidden="{{hiddenEssayQuestion}}" title="请输入问题内容" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
-    <input placeholder="请输入题目" bindinput='newEssaySubject' auto-focus/>
-</modal>
--->
 
 <modal hidden="{{hiddenSelectQuestion}}" title="请输入问题内容" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
     <input placeholder="请输入题目" bindinput='newSelectSubject' auto-focus/>
