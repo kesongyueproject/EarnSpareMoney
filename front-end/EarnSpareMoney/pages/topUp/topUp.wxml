@@ -1,0 +1,22 @@
+<!--pages/topUp/topUp.wxml-->
+<view class='middle'>
+  <view class='whole'>
+
+
+<view style='font-size:15px;margin-left:23px;margin-top:30px;'>充值金额</view>
+<view style='font-size:12px;margin-left:23px;margin-bottom:20px;color:grey;'>每次充值闲钱币数目不得超过10,000</view>
+<view class='middle'>
+
+
+
+<input class="weui-input ipt" style='width:250px' placeholder="请输入要充值的闲钱币数量" bindinput='inputvalue' />
+
+
+
+</view>
+
+
+<button class="weui-btn tbtn" type="primary" bindtap='post'>确认</button>
+</view>
+</view>
+

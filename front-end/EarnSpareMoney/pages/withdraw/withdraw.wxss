@@ -1,0 +1,21 @@
+/* pages/withdraw/withdraw.wxss */
+page{
+  background-color: #F8F8F8;
+}
+.whole{
+  margin-top: 20px;
+  height: 210px;
+  width: 300px;
+  background-color: white;
+  
+}
+.middle{
+  display:flex;
+  justify-content:center;
+}
+.tbtn{
+  width: 250px;
+}
+.ipt{
+  border-bottom: 1px solid grey;
+}
