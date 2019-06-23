@@ -34,7 +34,7 @@
 
 
   <view class='bottom'>
-    <button class='complete' type="primary">完成编辑</button>
+    <button class='complete' type="primary" bindtap='complete'>完成编辑</button>
   </view>
 </view>
 

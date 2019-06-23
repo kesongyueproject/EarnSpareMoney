@@ -161,7 +161,7 @@ Page({
   complete: function () {
     var that = this;
     wx.request({
-      url: '',
+      url: 'http://happyzhier.club:3000/mission',
       data: {
         title: that.data.detailOfQuestion.title,
         uid: app.globalData.username,
@@ -169,11 +169,16 @@ Page({
         mtype: "questionnaire",
         description: that.data.detailOfQuestion.description,
         imgs_url: that.data.detailOfQuestion.icon,
+        ing: true,
+        people: 0,
         people_limit: that.data.detailOfQuestion.people_limit,
         singleSelectQuestions: that.data.singleSelectQuestions,
         multipleSelectQuestions: that.data.multipleSelectQuestions
       },
       method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
 
       success: function (res) {
         console.log('submit success');
