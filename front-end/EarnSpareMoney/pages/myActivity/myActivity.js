@@ -8,8 +8,9 @@ Page({
     sliderLeft: 0,
     activityJoinIng:[],
     activityJoinEnd:[],
-    activityPubishIng:[],
-    activityPublishEnd:[]
+    activityPublishIng:[],
+    activityPublishEnd:[],
+    userID:"test"
   },
   onLoad: function () {
     var that = this;
@@ -22,23 +23,70 @@ Page({
         });
       }
     });
-
+  },
+  onShow:function(){
+    var that = this;
+    var userID = that.data.userID;
     wx.request({
-      url: 'http://happyzhier.club:3000/missions',
-      method:'GET',
-      dataType:'json', 
-      header:{'content-type':'application/json'},
-      success:function(res){
+      url: 'http://happyzhier.club:3000/user?uid=' + userID,
+      method: 'GET',
+      dataType: 'json',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
         //console.log(res.data);
-        that.setData({
-          activityJoinIng: res.data.data,
-          activityJoinEnd: res.data.data,
-          activityPubishIng: res.data.data,
-          activityPublishEnd: res.data.data
-        });
+        var api = [], ape = [];
+        if (res.data.publish != null) {
+          for (var i = 0, len = res.data.publish.length; i < len; i++) {
+            wx.request({
+              url: 'http://happyzhier.club:3000/mission?mid=' + res.data.publish[i].mid,
+              method: 'GET',
+              dataType: 'json',
+              header: { 'content-type': 'application/json' },
+              success: function (res) {
+                //console.log(res.data);
+
+                if (res.data.ing == true) {
+                  api.push(res.data);
+                } else {
+                  ape.push(res.data);
+                }
+
+                that.setData({
+                  activityPublishIng: api,
+                  activityPublishEnd: ape
+                });
+              }
+            });
+          }
+        }
+
+        var aji = [], aje = [];
+        if (res.data.participate != null) {
+          for (var i = 0, len = res.data.participate.length; i < len; i++) {
+            wx.request({
+              url: 'http://happyzhier.club:3000/mission?mid=' + res.data.participate[i].mid,
+              method: 'GET',
+              dataType: 'json',
+              header: { 'content-type': 'application/json' },
+              success: function (res) {
+                //console.log(res.data);
+
+                if (res.data.ing == true) {
+                  aji.push(res.data);
+                } else {
+                  aje.push(res.data);
+                }
+
+                that.setData({
+                  activityJoinIng: aji,
+                  activityJoinEnd: aje
+                });
+              }
+            });
+          }
+        }
       }
     });
-    
   },
 
   tabClick: function (e) {
@@ -47,22 +95,17 @@ Page({
       activeIndex: e.currentTarget.id  
     });
   },
-  publish_doing_more:function(){
-    // this.setData({
-    //   activeIndex:2
-    // });
+  onGoJoinIngDetail:function(event){
+    var mid = event.currentTarget.dataset.mid;
+    var type = event.currentTarget.dataset.type;
     wx.navigateTo({
-      url:'allActivity'
+      url: '/pages/activityDetail/activityDetail?mid=' + mid +'&uid='+this.data.userID + '&type=' + type
     });
   },
-  onGoJoinIngDetail:function(event){
-    //console.log(event.currentTarget.dataset.mid);
-    var mid = event.currentTarget.dataset.mid;
-    //url = '/pages/activityDetail/activityDetail?mid='+mid;
-    var obj = {
-      url: '/pages/activityDetail/activityDetail?mid=' + mid
-    };
-    wx.navigateTo(obj);
+  onGoMoreAcitivity:function(event){
+    var type = event.currentTarget.dataset.type;
+    wx.navigateTo({
+      url: '/pages/myActivity/allActivity?uid='+this.data.userID+'&type='+type
+    });
   }
-
 });
