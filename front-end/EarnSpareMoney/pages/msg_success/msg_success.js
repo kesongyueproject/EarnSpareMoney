@@ -16,7 +16,9 @@ Page({
   },
 
   getAllActivity: function () {
-
+    wx.switchTab({
+      url: '/pages/myActivity/myActivity',
+    })
   },
 
   back: function () {

@@ -6,8 +6,9 @@ Page({
    */
   data: {
     img: "",
-    name: "name",
-    wechat: "wechatID",
+    nickname: "nickname",
+    uid: "uid",
+    signature: "signature",
     school: "中山大学",
     phone: "12345678910",
     credit: "99"
@@ -33,8 +34,9 @@ Page({
         console.log(res.data);
         that.setData({
           img: res.data.userInfo.img_url,
-          name: res.data.userInfo.nickname,
-          wechat: res.data.userInfo.uid,
+          nickname: res.data.userInfo.nickname,
+          uid: res.data.userInfo.uid,
+          signature: res.data.userInfo.signature,
           school: res.data.userInfo.school,
           phone: res.data.userInfo.tel,
           credit: res.data.userInfo.credit
