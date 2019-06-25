@@ -1,6 +1,7 @@
 // pages/search_tasks/search_tasks.js
 
-var app = getApp()
+var app = getApp();
+var pageNum = 0;
 Page({
 
   /**
@@ -40,7 +41,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        console.log(res.data);
+        console.log(res);
         var len = res.data.count;
         for (var i = 0; i < len; i++) {
           list0.push(res.data.data[i]);
@@ -130,7 +131,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**

@@ -6,13 +6,18 @@
   </view>
 
   <view class='name item'>
-    <text class='name_text left_text'>名称</text>
-    <text class='his_name right_text'>{{name}}</text>
+    <text class='name_text left_text'>用户名</text>
+    <text class='his_name right_text'>{{uid}}</text>
   </view>
 
-  <view class='wechat item'>
-    <text class='wechat_text left_text'>WeChat ID</text>
-    <text class='his_wechat right_text'>{{wechat}}</text>
+  <view class='nickname item'>
+    <text class='nickname_text left_text'>昵称</text>
+    <text class='his_wechat right_text'>{{nickname}}</text>
+  </view>
+
+  <view class='signature item'>
+    <text class='signature_text left_text'>签名</text>
+    <text class='his_signature right_text'>{{signature}}</text>
   </view>
 
   <view class='school item'>
