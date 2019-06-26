@@ -1,4 +1,5 @@
 // pages/item_info/item_info.js
+var app = getApp();
 Page({
 
   /**
@@ -11,7 +12,9 @@ Page({
     nickname: "",
     introduction: "introduction",
     img_url: "",
-    description: "description"
+    description: "description",
+    mtype: "",
+    reward: 0
   },
 
   /**
@@ -35,7 +38,9 @@ Page({
         that.setData({
           uid: res.data.uid,
           title: res.data.title,
-          description: res.data.description
+          description: res.data.description,
+          mtype: res.data.mtype,
+          reward: res.data.reward
         })
 
         wx.request({
@@ -64,14 +69,38 @@ Page({
   },
 
   participate: function () {
+    var that = this;
     wx.showModal({
       title: '消息提示',
       content: '你确定要参加该活动吗？',
       confirmText: "确定",
       cancelText: "取消",
       success: function (res) {
-        //console.log(res);
         if (res.confirm) {
+          wx.request({
+            url: 'http://happyzhier.club:3000/participate',
+            data: {
+              mid: that.data.mid,
+              uid: app.globalData.username
+            },
+            method: 'POST',
+            header: {
+              'content-type': 'application/json'
+            },
+
+            success: function (res) {
+              console.log('submit success');
+            },
+
+            fail: function () {
+              console.log('submit fail');
+            },
+
+            complete: function () {
+              console.log('submit comlete');
+            }
+          })
+
           wx.navigateTo({
             url: '../msg_success/msg_success'
           })

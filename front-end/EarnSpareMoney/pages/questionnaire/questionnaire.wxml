@@ -23,7 +23,7 @@
       </checkbox-group>
     </view>
 
-    <image class='add_question' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561902676&di=01c4c1264c9acc5781f37db02848caba&imgtype=jpg&er=1&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F37%2F91%2F43573c6879927f2.jpg' bindtap='addQuestion'></image>
+    <image class='add_question' src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1561447537&di=cec1cec867e595f8751de12da64eaab0&src=http://pic.58pic.com/58pic/14/99/26/58458PICy6B_1024.jpg' bindtap='addQuestion'></image>
   </view>
 
   <view class='bottom'>

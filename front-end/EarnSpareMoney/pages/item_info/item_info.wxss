@@ -8,7 +8,7 @@
 }
 
 .top{
-  width: 100%;
+  width: 100%; 
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -68,6 +68,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 20rpx 20rpx;
+}
+
+.cell{
+  width: 90%;
+  height: 100rpx;
+  border-top: 1rpx solid #777777; 
+  font-size: 16px;
+  margin-left: 30rpx;
 }
 
 .description{
