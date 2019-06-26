@@ -1,5 +1,5 @@
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
+var app = getApp();
 Page({
   data: {
     tabs: ["我参加的", "我发布的"],
@@ -10,10 +10,13 @@ Page({
     activityJoinEnd:[],
     activityPublishIng:[],
     activityPublishEnd:[],
-    userID:"test"
+    userID:""
   },
   onLoad: function () {
     var that = this;
+    this.setData({
+      userID:app.globalData.username
+    });
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
