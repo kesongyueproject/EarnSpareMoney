@@ -7,7 +7,7 @@
       <view class="weui-label">*用户名：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" bindinput='userName'/>
+      <input class="weui-input" placeholder="不得超过20个字符" bindinput='userName'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode cellh">
@@ -15,7 +15,7 @@
       <view class="weui-label">*密码：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" password='*' bindinput='passWord'/>
+      <input class="weui-input" placeholder="长度不得少于6位" password='*' bindinput='passWord'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode cellh">
@@ -31,7 +31,7 @@
       <view class="weui-label">*昵称：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" bindinput='nickName'/>
+      <input class="weui-input" placeholder="不得超过15个字符" bindinput='nickName'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode cellh">
@@ -39,7 +39,7 @@
       <view class="weui-label">个性签名：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" bindinput='signature_'/>
+      <input class="weui-input" placeholder="少于50字" bindinput='signature_'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode cellh">
@@ -47,7 +47,7 @@
       <view class="weui-label">*电话：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" bindinput='phone_num'/>
+      <input class="weui-input" placeholder="11位手机号码" bindinput='phone_num'/>
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode cellh">
@@ -55,7 +55,7 @@
       <view class="weui-label">学校：</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="" bindinput='school_'/>
+      <input class="weui-input" placeholder="不得超过30个字符" bindinput='school_'/>
     </view>
   </view>
 </view>
