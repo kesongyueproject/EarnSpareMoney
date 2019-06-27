@@ -86,7 +86,7 @@ Page({
         console.log(m-mm)
         wx.request({
           url: 'http://happyzhier.club:3000/user?uid=' + app.globalData.username,
-          method: 'POST',
+          method: 'PUT',
           data: {
             uid: this.data.uid,
             passwd: this.data.passwd,

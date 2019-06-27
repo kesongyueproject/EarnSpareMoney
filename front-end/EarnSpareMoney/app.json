@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/firstPage/firstPage",
     "pages/search_tasks/search_tasks",
     "pages/myActivity/myActivity",
@@ -26,7 +27,9 @@
     "pages/questionnaire/questionnaire",
     "pages/balance/balance",
     "pages/topUp/topUp",
+    "pages/modify_img/modify_img",
     "pages/withdraw/withdraw"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
