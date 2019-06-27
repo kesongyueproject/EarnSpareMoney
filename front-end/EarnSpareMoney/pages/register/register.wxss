@@ -29,3 +29,6 @@ page{
   font-size: 13px;
   color:red;
 }
+.weui-input{
+  font-size: 15px;
+}
