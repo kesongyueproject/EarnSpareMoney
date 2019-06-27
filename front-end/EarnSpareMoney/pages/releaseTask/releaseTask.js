@@ -45,6 +45,16 @@ Page({
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths;
+        wx.uploadFile({
+          url: 'http://happyzhier.club:3000/image',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success(res){
+            var data = JSON.parse(res.data);
+            that.data.img_url = data.imgs_url;
+          }
+        })
         that.setData({
           images: that.data.images.concat(res.tempFilePaths)
         });
@@ -67,6 +77,7 @@ Page({
       success: function (res) {
         if (res.confirm) {
           console.log('点击确定了');
+          that.data.img_url = 'http://d.lanrentuku.com/down/png/1712/22xiaodongwu/22xiaodongwu_22.png'
         } else if (res.cancel) {
           console.log('点击取消了');
           return false;
