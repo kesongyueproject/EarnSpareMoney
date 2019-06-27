@@ -26,6 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    activitys: []
     var that = this;
     wx.request({
       url: 'http://happyzhier.club:3000/user?uid=' + that.data.userID,

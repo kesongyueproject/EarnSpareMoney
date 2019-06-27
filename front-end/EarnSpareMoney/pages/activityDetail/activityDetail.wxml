@@ -1,25 +1,61 @@
 <!--pages/activityDetail/activityDetail.wxml-->
-<view class="page__title title">{{activity.title}}</view>
+<view hidden="{{activity.mtype != 'other'}}">
+  <view class="page__title title">{{activity.title}}</view>
 
-<view class="weui-panel weui-panel_access">
-    <view class="weui-panel__bd">
-        <view class="weui-media-box weui-media-box_appmsg" >
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                <image class="weui-media-box__thumb" src="{{activity.imgs_url}}" />
-            </view>
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                <view class="weui-media-box__title">发起人</view>
-                <view class="weui-media-box__desc">摘要信息</view>
-            </view>
-        </view>
-    </view>
+  <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_appmsg" >
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="{{activity.imgs_url}}" bindtap='GoAuthorInfo'/>
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">{{activity.uid}}</view>
+              </view>
+          </view>
+      </view>
+  </view>
+
+  <view class="weui-cells weui-cells_after-title description">
+      <view class="weui-article">
+          <view class="weui-article__title description-text">描述</view>
+          <view class="weui-article__p">{{activity.description}}</view>
+      </view>
+  </view>
+  <view class='btn'>
+    <button class="weui-btn" type="primary" bindtap="finishMission" hidden="{{mtype == 'publishIng' || mtype == 'publishEnd'}}" disabled="{{mtype == 'joinEnd'}}">完成任务</button>
+    <button class="weui-btn" type="warn" bindtap="onClick" disabled="{{mtype=='joinEnd' || mtype=='publishEnd'}}">{{cancel}}</button>
+  </view>
+  
 </view>
 
-<view class="weui-cells weui-cells_after-title description">
-    <view class="weui-article">
-        <view class="weui-article__title description-text">描述</view>
-        <view class="weui-article__p">{{activity.description}}</view>
-    </view>
-</view>
+<!--问卷-->
+<view class='new_questionnaire' hidden="{{activity.mtype != 'questionnaire'}}">
+  <view class='top'>
+    <text class='questionnaire_name'>挣闲钱</text>
+  </view>
 
-<button class="weui-btn btn" type="warn" bindtap="onClick" disabled="{{mtype=='joinEnd' || mtype=='publishEnd'}}">{{cancel}}</button>
+  <view class='middle'>
+    <view class='single_select_questions' wx:for="{{singleSelectQuestions}}" wx:key="{{index}}" data-index="{{index}}">
+      <text class='question_subject'>{{item.subject}}({{item.type}})</text>
+      <radio-group class='question_options'>
+        <label class="option" wx:for="{{item.options}}" wx:key="{{index}}">
+          <radio>{{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+
+  <view class='multiple_select_questions' wx:for="{{multipleSelectQuestions}}" wx:key="{{index}}" data-index="{{index}}">
+    <text class='question_subject'>{{item.subject}}({{item.type}})</text>
+      <checkbox-group class='question_options'>
+        <label class="option" wx:for="{{item.options}}" wx:key="{{index}}">
+          <radio>{{item.name}}</radio>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view class='btn'>
+      <button class="weui-btn" type="primary" bindtap="finishMission" hidden="{{mtype == 'publishIng' || mtype == 'publishEnd'}}" disabled="{{mtype == 'joinEnd'}}">完成问卷</button>
+    <button class="weui-btn" type="warn" bindtap="onClick" disabled="{{mtype=='joinEnd' || mtype=='publishEnd'}}">{{cancel}}</button>
+  </view>
+</view>
