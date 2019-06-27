@@ -31,7 +31,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        console.log(res.data);
+        //console.log(res.data);
         that.setData({
           img: res.data.userInfo.img_url,
           nickname: res.data.userInfo.nickname,

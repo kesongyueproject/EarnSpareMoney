@@ -6,15 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    singleSelectQuestions: [{
-      type: "单选", subject: "周杰伦",
-      options: [{ name: "七里香" }, { name: "一路向北" }, { name: "半岛铁盒" }]
-    }],
+    singleSelectQuestions: [],
 
-    multipleSelectQuestions: [{
-      type: "多选", subject: "林俊杰",
-      options: [{ name: "修炼爱情" }, { name: "江南" }, { name: "背对背拥抱" }, { name: "一千年以后" }]
-    }],
+    multipleSelectQuestions: [],
 
     hiddenSelectQuestion: true,
     questionType: 2,
@@ -113,6 +107,8 @@ Page({
       })
     }
 
+    console.log(that.data.singleSelectQuestions);
+
     that.setData({
       hiddenSelectQuestion: true,
       questionType: 2,
@@ -156,7 +152,9 @@ Page({
       },
 
       success: function (res) {
-        console.log('submit success');
+        wx.navigateTo({
+          url: '/pages/release_success/release_success',
+        })
       },
 
       fail: function () {
