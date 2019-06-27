@@ -13,13 +13,18 @@ Page({
     mid: 0,
     images: [],
     biaoti: '',
-    faburen : '',
+    userID : '',
     baochou : 0,
     task_num: 0,
     miaoshu : '',
     people: 0,
     ing: true,
     img_url:'http://d.lanrentuku.com/down/png/1712/22xiaodongwu/22xiaodongwu_22.png'
+  },
+  onLoad:function(){
+    this.setData({
+      userID: app.globalData.username
+    })
   },
   radioChange: function (e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value);
@@ -77,11 +82,7 @@ Page({
       biaoti: e.detail.value
     })
   },
-  input_faburen: function (e) {
-    this.setData({
-      faburen: e.detail.value
-    })
-  },
+  
   input_baochou: function (e) {
     this.setData({
       baochou: e.detail.value
@@ -132,11 +133,12 @@ Page({
         })
       }
       else{
+        //console.log(that.data.userID);
         wx.request({
           url: 'http://happyzhier.club:3000/mission',
           data: {
             title: that.data.biaoti,
-            uid: that.data.faburen,
+            uid: that.data.userID,
             reward: that.data.baochou,
             mtype: temp,
             description: that.data.miaoshu,
