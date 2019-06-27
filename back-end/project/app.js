@@ -3,10 +3,23 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fs = require('fs');
+
+var https = require('https');
+var privateKey  = fs.readFileSync('C:/Users/Administrator/Desktop/to/private.pem', 'utf8');
+var certificate = fs.readFileSync('C:/Users/Administrator/Desktop/to/file.crt', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+var SSLPORT = 443;
+var httpsServer = https.createServer(credentials, app);
+httpsServer.listen(SSLPORT, function() {
+    console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT);
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
