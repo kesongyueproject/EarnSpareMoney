@@ -30,9 +30,15 @@ Page({
   onShow:function(){
     var that = this;
     var userID = that.data.userID;
+    this.setData({
+      activityJoinIng: [],
+      activityJoinEnd: [],
+      activityPublishIng: [],
+      activityPublishEnd: []
+    });
     wx.request({
       url: 'http://happyzhier.club:3000/user?uid=' + userID,
-      method: 'GET',
+      method: 'GET', 
       dataType: 'json',
       header: { 'content-type': 'application/json' },
       success: function (res) {
@@ -65,6 +71,8 @@ Page({
 
         var aji = [], aje = [];
         if (res.data.participate != null) {
+          var participateMissions = res.data.participate;
+          //console.log(participateMissions[0].finish);
           for (var i = 0, len = res.data.participate.length; i < len; i++) {
             wx.request({
               url: 'http://happyzhier.club:3000/mission?mid=' + res.data.participate[i].mid,
@@ -74,7 +82,7 @@ Page({
               success: function (res) {
                 //console.log(res.data);
 
-                if (res.data.ing == true) {
+                if (res.data.ing == true && !participateMissions[0].finish) {
                   aji.push(res.data);
                 } else {
                   aje.push(res.data);
