@@ -1,5 +1,5 @@
 <view class="weui-cells weui-cells_after-title">
-  <navigator url="/pages/modify_signature/modify_signature" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="/pages/modify_img/modify_img" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
 
         <view class="weui-cell__bd">
       <view>头像</view>
