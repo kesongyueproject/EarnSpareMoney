@@ -11,7 +11,8 @@ Page({
     mtype:"",
     userID:"",
     atype:"other",
-    singleSelectQuestions:[]
+    singleSelectQuestions:[],
+    multipleSelectQuestions:[]
   },
   onClick:function(){
     var that = this;
@@ -105,7 +106,8 @@ Page({
             header: { 'content-type': 'application/json' },
             success:function(res){
               that.setData({
-                singleSelectQuestions:res.data.singleSelectQuestions
+                singleSelectQuestions:res.data.singleSelectQuestions,
+                multipleSelectQuestions:res.data.multipleSelectQuestions
               });
             }
           })
@@ -116,7 +118,7 @@ Page({
   },
 
   finishMission:function(){
-    var that = this;
+   var that = this;
     wx.request({
       url: 'http://happyzhier.club:3000/finish',
       method: 'PUT',
@@ -154,9 +156,10 @@ Page({
           filePath: tempFilePaths[0],
           name: 'file',
           success(res) {
-            const data = res.data
+            const data = JSON.parse(res.data);
             //do something
-            console.log(res);
+            console.log(data.imgs_url);
+            console.log(typeof data);
           }
         })
       }
