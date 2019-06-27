@@ -144,6 +144,23 @@ Page({
         })
       }
     });
+
+   /* wx.chooseImage({
+      success(res) {
+        const tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths[0]);
+        wx.uploadFile({
+          url: 'http://happyzhier.club:3000/image', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success(res) {
+            const data = res.data
+            //do something
+            console.log(res);
+          }
+        })
+      }
+    })*/
   },
   GoAuthorInfo:function(){
     wx.navigateTo({
