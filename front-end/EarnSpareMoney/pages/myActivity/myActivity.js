@@ -12,7 +12,7 @@ Page({
     activityPublishEnd:[],
     userID:""
   },
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this;
     this.setData({
       userID:app.globalData.username

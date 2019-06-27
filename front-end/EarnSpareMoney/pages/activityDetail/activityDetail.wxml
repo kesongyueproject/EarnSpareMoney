@@ -6,7 +6,7 @@
       <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_appmsg" >
               <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                  <image class="weui-media-box__thumb" src="{{activity.imgs_url}}" />
+                  <image class="weui-media-box__thumb" src="{{activity.imgs_url}}" bindtap='GoAuthorInfo'/>
               </view>
               <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                   <view class="weui-media-box__title">{{activity.uid}}</view>
@@ -54,7 +54,8 @@
     </view>
   </view>
 
-  <view class='bottom'>
-    <button class='complete' type="primary" bindtap='complete'>完成编辑</button>
+  <view class='btn'>
+      <button class="weui-btn" type="primary" bindtap="finishMission" hidden="{{mtype == 'publishIng' || mtype == 'publishEnd'}}" disabled="{{mtype == 'joinEnd'}}">完成问卷</button>
+    <button class="weui-btn" type="warn" bindtap="onClick" disabled="{{mtype=='joinEnd' || mtype=='publishEnd'}}">{{cancel}}</button>
   </view>
 </view>

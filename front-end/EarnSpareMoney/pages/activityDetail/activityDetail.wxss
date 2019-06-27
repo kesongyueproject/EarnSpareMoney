@@ -38,6 +38,8 @@
   right:0;
   margin: 10px;
 }
+
+
 /* pages/questionnaire/questionnaire.wxss */
 .top{
   width: 100%;
@@ -60,6 +62,7 @@
 .single_select_questions, .multiple_select_questions{
   width: 100%;
   margin-top: 30rpx;
+  background-color: #EDEDED;
 }
 
 .question_options{
@@ -73,8 +76,7 @@
 }
 
 .add_question{
-  width: 150px;
-  height: 150px;
+  width: 90%;
   margin-top: 20rpx;
   margin-bottom: 90rpx;
   align-self: center;

@@ -136,8 +136,19 @@ Page({
             });
           }
         })
+      },
+      fail:function(res){
+        wx.showModal({
+          content: '连接服务器失败',
+          showCancel: false,
+        })
       }
     });
+  },
+  GoAuthorInfo:function(){
+    wx.navigateTo({
+      url: '/pages/author_info/author_info?name=' + this.data.userID,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
