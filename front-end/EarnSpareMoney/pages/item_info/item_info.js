@@ -34,7 +34,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        console.log(res.data);
+        //console.log(res.data);
         that.setData({
           uid: res.data.uid,
           title: res.data.title,
@@ -50,7 +50,7 @@ Page({
             'content-type': 'application/json'
           },
           success: function (res) {
-            console.log(res.data);
+            //console.log(res.data);
             that.setData({
               nickname: res.data.userInfo.nickname,
               introduction: res.data.userInfo.signature,
@@ -70,44 +70,52 @@ Page({
 
   participate: function () {
     var that = this;
-    wx.showModal({
-      title: '消息提示',
-      content: '你确定要参加该活动吗？',
-      confirmText: "确定",
-      cancelText: "取消",
-      success: function (res) {
-        if (res.confirm) {
-          wx.request({
-            url: 'http://happyzhier.club:3000/participate',
-            data: {
-              mid: that.data.mid,
-              uid: app.globalData.username
-            },
-            method: 'POST',
-            header: {
-              'content-type': 'application/json'
-            },
 
-            success: function (res) {
-              console.log('submit success');
-            },
+    if (app.globalData.username == that.data.uid){
+      wx.showModal({
+        title: '消息提示',
+        content: '活动发起人不能参加该活动。',
+      })
+    }else{
+      wx.showModal({
+        title: '消息提示',
+        content: '你确定要参加该活动吗？',
+        confirmText: "确定",
+        cancelText: "取消",
+        success: function (res) {
+          if (res.confirm) {
+            wx.request({
+              url: 'http://happyzhier.club:3000/participate',
+              data: {
+                mid: that.data.mid,
+                uid: app.globalData.username
+              },
+              method: 'POST',
+              header: {
+                'content-type': 'application/json'
+              },
 
-            fail: function () {
-              console.log('submit fail');
-            },
+              success: function (res) {
+                console.log('submit success');
+              },
 
-            complete: function () {
-              console.log('submit comlete');
-            }
-          })
+              fail: function () {
+                console.log('submit fail');
+              },
 
-          wx.navigateTo({
-            url: '../msg_success/msg_success'
-          })
-        } else {
+              complete: function () {
+                console.log('submit comlete');
+              }
+            })
+
+            wx.navigateTo({
+              url: '../msg_success/msg_success'
+            })
+          } else {
+          }
         }
-      }
-    });
+      });
+    }
   },
 
   /**

@@ -23,7 +23,7 @@
       </checkbox-group>
     </view>
 
-    <image class='add_question' src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1561447537&di=cec1cec867e595f8751de12da64eaab0&src=http://pic.58pic.com/58pic/14/99/26/58458PICy6B_1024.jpg' bindtap='addQuestion'></image>
+    <button class='add_question' bindtap='addQuestion'>添加题目</button>
   </view>
 
   <view class='bottom'>
