@@ -4,3 +4,28 @@
   width: 80%;
   margin-top: 50rpx;
 }
+.cellh{
+  height: 30px;
+}
+.inputcss{
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+}
+.inline{
+  display: inline-flex;
+  font-size : 20px;
+}
+page{
+  background-color: #F8F8F8;
+}
+.weui-cells{
+  width: 300px;
+  margin-left: 3%;
+  margin-top:8%
+}
+.tip{
+  margin-left: 3%;
+  font-size: 13px;
+  color:red;
+}

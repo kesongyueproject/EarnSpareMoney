@@ -32,7 +32,7 @@ Page({
       },
     })
 
-    var list0 = [], list1 = [], list2 = [];
+    var list0 = [], list1 = [], list2 = [], list3 = [];
 
     wx.request({
       url: 'http://happyzhier.club:3000/missions',
@@ -41,7 +41,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
+        //console.log(res);
         var len = res.data.count;
         for (var i = 0; i < len; i++) {
           list0.push(res.data.data[i]);
@@ -49,9 +49,11 @@ Page({
             case "questionnaire":
               list1.push(res.data.data[i]);
               break;
-            case "other":
+            case "活动":
               list2.push(res.data.data[i]);
               break;
+            case "跑腿":
+              list3.push(res.data.data[i]);
             default:
               break;
           }
@@ -59,7 +61,8 @@ Page({
         that.setData({
           taskList0: list0,
           taskList1: list1,
-          taskList2: list2
+          taskList2: list2,
+          taskList3: list3
         });
       }
     })
