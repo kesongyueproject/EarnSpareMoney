@@ -1,4 +1,4 @@
-/* pages/item_info/item_info.wxss */
+kang/* pages/item_info/item_info.wxss */
 .item_info{
   width: 100%;
   height: 100%;
