@@ -1,4 +1,8 @@
 /* pages/activityDetail/activityDetail.wxss */
+.title{
+  text-align: center;
+}
+
 .line-css{
   padding: 10px 15px;
   position: relative;
@@ -33,4 +37,67 @@
   left: 0;
   right:0;
   margin: 10px;
+}
+
+
+/* pages/questionnaire/questionnaire.wxss */
+.top{
+  width: 100%;
+  margin-top: 15rpx;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center; 
+  font-size: 22px;
+}
+
+.middle{
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  font-size: 16px;
+}
+
+.single_select_questions, .multiple_select_questions{
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: #EDEDED;
+}
+
+.question_options{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.option{
+  margin-top: 5rpx;
+}
+
+.add_question{
+  width: 90%;
+  margin-top: 20rpx;
+  margin-bottom: 90rpx;
+  align-self: center;
+}
+
+.bottom{
+  width: 100%;
+  background-color: white;
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.complete{
+  width: 90%;
+  position: fixed;
+  bottom: 20rpx;
+}
+
+.add_option{
+  font-size: 14px;
 }

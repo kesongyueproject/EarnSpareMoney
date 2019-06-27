@@ -1,0 +1,14 @@
+<view class="weui-uploader__bd">
+
+<view class='middle'>
+<image class="weui-uploader__img"  src="{{img_url}}" mode="aspectFill" />
+</view>
+
+
+
+
+
+<button class="weui-btn" type="primary" bindtap="chooseImage">选择图片</button>
+<button class="weui-btn" type="primary" bindtap="">上传头像</button>
+
+</view>

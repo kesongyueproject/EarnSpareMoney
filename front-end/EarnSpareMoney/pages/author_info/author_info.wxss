@@ -45,7 +45,7 @@ page{
   margin-top: 20rpx;
 }
 
-.wechat{
+.nickname, .signature{
   border-top: 1rpx solid gray;
 }
 

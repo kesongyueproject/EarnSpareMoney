@@ -1,0 +1,9 @@
+/* pages/modify_signature/modify_signature.wxss */
+/* pages/modify/modify.wxss */
+page{
+  background-color: #F8F8F8;
+
+}
+.right{
+  float: right;
+}

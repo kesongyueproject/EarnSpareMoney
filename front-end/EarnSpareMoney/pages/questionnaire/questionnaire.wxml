@@ -1,0 +1,40 @@
+<!--pages/questionnaire/questionnaire.wxml-->
+<view class='new_questionnaire'>
+  <view class='top'>
+    <text class='questionnaire_name'>挣闲钱</text>
+  </view>
+
+  <view class='middle'>
+    <view class='single_select_questions' wx:for="{{singleSelectQuestions}}" wx:key="{{index}}" data-index="{{index}}">
+      <text class='question_subject'>{{item.subject}}({{item.type}})</text>
+      <radio-group class='question_options'>
+        <label class="option" wx:for="{{item.options}}" wx:key="{{index}}">
+          <radio>{{item.name}}</radio>
+        </label>
+      </radio-group>
+    </view>
+
+  <view class='multiple_select_questions' wx:for="{{multipleSelectQuestions}}" wx:key="{{index}}" data-index="{{index}}">
+    <text class='question_subject'>{{item.subject}}({{item.type}})</text>
+      <checkbox-group class='question_options'>
+        <label class="option" wx:for="{{item.options}}" wx:key="{{index}}">
+          <radio>{{item.name}}</radio>
+        </label>
+      </checkbox-group>
+    </view>
+
+    <button class='add_question' bindtap='addQuestion'>添加题目</button>
+  </view>
+
+  <view class='bottom'>
+    <button class='complete' type="primary" bindtap='complete'>完成编辑</button>
+  </view>
+</view>
+
+<modal hidden="{{hiddenSelectQuestion}}" title="请输入问题内容" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input placeholder="请输入题目" bindinput='newSelectSubject' auto-focus/>
+    <label wx:for="{{newOptions}}" wx:key="{{index}}">
+      <input placeholder="选项" bindinput='newSelectOptions' data-index='{{index}}'/>
+    </label>
+    <button class='add_option' bindtap='addOption'>添加选项</button>
+</modal>

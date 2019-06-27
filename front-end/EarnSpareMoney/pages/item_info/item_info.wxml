@@ -3,17 +3,32 @@
   <view class='top'>
     <text class='title'>{{title}}</text>
     <view class='author' bindtap='getAuthorInfo'>
-      <image class='img' src='{{img}}'></image>
+      <image class='img' src='{{img_url}}'></image>
       <view class='author_info'>
-        <text class='name'>{{name}}</text>
-        <text class='digest'>{{digest}}</text>
+        <text class='publisher'>{{nickname}}</text>
+        <text class='introduction'>{{introduction}}</text>
       </view>
     </view>
   </view>
 
   <view class='bottom'>
     <text class='subtitle'>任务详情</text>
-    <text class='description'>{{description}}</text>
+
+    <view class='cell'>
+      <text>任务类型：</text>
+      <text class='type'>{{mtype}}</text>
+    </view>
+
+    <view class='cell'>
+      <text>报酬：</text>
+      <text class='reward'>{{reward}}</text>
+    </view>
+
+    <view class='cell'>
+      <text>任务描述：</text>
+      <text class='description'>{{description}}</text>
+    </view>
+
     <view class='black'></view>
     <button class='button' type="primary" bindtap='participate'>我要参加</button>
 

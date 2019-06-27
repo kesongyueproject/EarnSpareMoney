@@ -1,5 +1,5 @@
 /* pages/self_info/self_info.wxss */
 
 page{
-  background-color: #EDEDED;
+  background-color: #F8F8F8;
 }

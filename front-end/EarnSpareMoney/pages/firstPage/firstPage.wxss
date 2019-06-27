@@ -1,0 +1,45 @@
+
+.container{
+  margin-top: 50%;
+}
+.title{
+  position: absolute;
+  top: 20%;
+}
+.title_{
+  font-size: 100rpx;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}
+.bg_image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+}
+.weui-flex{
+  margin-top: 125%;
+}
+.btn{
+  width: 20px;
+}
+.placeholder{
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    background-color: #EBEBEB;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #cfcfcf;
+}
+.login{
+  background-color: rgba(43, 143, 236, 0.801);
+  color: white
+}
+.reg{
+  background-color: rgba(166, 170, 168, 0.8);
+  color: white
+}

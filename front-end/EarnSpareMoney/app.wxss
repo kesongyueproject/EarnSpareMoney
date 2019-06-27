@@ -9,3 +9,13 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.mui-ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

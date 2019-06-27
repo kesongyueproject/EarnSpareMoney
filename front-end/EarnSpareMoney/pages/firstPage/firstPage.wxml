@@ -1,0 +1,11 @@
+
+
+  <view class='bg'>
+    <image class='bg_image' src='/pages/image/background.jpg' mode='aspectFill'></image>
+  </view>
+  
+
+<view class="weui-flex">
+  <view class="weui-flex__item"><button class="placeholder login" bindtap='login'>登录</button></view>
+  <view class="weui-flex__item"><button class="placeholder reg" bindtap='regis'>注册</button></view>
+</view>

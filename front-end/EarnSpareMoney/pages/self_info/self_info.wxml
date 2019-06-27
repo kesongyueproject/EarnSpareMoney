@@ -1,24 +1,49 @@
 <view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell">
-    <view class="weui-cell__bd">
+  <navigator url="/pages/modify_img/modify_img" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+        <view class="weui-cell__bd">
       <view>头像</view>
     </view>
-    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-      <image src="/pages/image/contact.png"  style="width: 50px; height: 50px; display: block"/>
+    <view class="weui-cell__hd weui-cell__ft_in-access" style="position: relative;margin-right: 10px;">
+      <image src="{{img_url}}"  style="width: 50px; height: 50px; display: block"/>
     </view>    
-  </view>
+  
+
+  </navigator>
+
+  
 </view>
 
 <view class="weui-cells__title"></view>
 <view class="weui-cells weui-cells_after-title">
+
   <view class="weui-cell">
-    <view class="weui-cell__bd">名称</view>
-    <view class="weui-cell__ft">abc</view>
+    <view class="weui-cell__bd">ID</view>
+      <view class="weui-cell__ft">{{uid}}</view>
   </view>
-  <view class="weui-cell">
-    <view class="weui-cell__bd">WeChatID</view>
-      <view class="weui-cell__ft">abc</view>
-  </view>
+
+  <navigator url="/pages/modify_nickname/modify_nickname" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+  
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">昵称</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{nickname}}</view>
+      
+
+  </navigator>
+
+    <navigator url="/pages/modify_signature/modify_signature" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+  
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">个性签名</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{signature}}</view>
+      
+
+  </navigator>
+
 </view>
 
 <view class="weui-cells__title"></view>
@@ -29,7 +54,7 @@
       <view class="weui-cell__bd">
         <view style="display: inline-block; vertical-align: middle">学校</view>
       </view>
-      <view class="weui-cell__ft weui-cell__ft_in-access">SYSU</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{school}}</view>
       
 
   </navigator>
@@ -40,7 +65,7 @@
       <view class="weui-cell__bd">
         <view style="display: inline-block; vertical-align: middle">联系电话</view>
       </view>
-      <view class="weui-cell__ft weui-cell__ft_in-access">18888888888</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{tel}}</view>
 </navigator>
 
 
@@ -49,12 +74,10 @@
           <view class="weui-cell__bd">
         <view style="display: inline-block; vertical-align: middle">信用度</view>
       </view>
-      <view class="weui-cell__ft weui-cell__ft_in-access">8</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{credit}}</view>
 
 
     </navigator>
-
-
   </view>
 
 
