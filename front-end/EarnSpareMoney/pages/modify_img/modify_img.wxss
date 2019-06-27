@@ -1,0 +1,24 @@
+/* pages/modify_img/modify_img.wxss */
+.showpic{
+  display: block;
+
+}
+.weui-flex{
+  height: 250px;
+  width: 250px;
+}
+.middle{
+  display:flex;           
+  justify-content: center;  
+
+}
+.weui-uploader__img{
+  margin-top: 10%;
+  height: 250px;
+  width: 250px;
+  border: 1px solid black;
+  margin-bottom: 5%
+}
+.weui-btn{
+  width: 252px;
+}

@@ -20,12 +20,26 @@
   z-index: -1;
 
 }
-.login{
-  height: 30rpx;
-  width: 80%;
+.weui-flex{
+  margin-top: 125%;
 }
-.regis{
-  height: 30rpx;
-  width: 80%;
-  margin-top:100rpx; 
+.btn{
+  width: 20px;
+}
+.placeholder{
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    background-color: #EBEBEB;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #cfcfcf;
+}
+.login{
+  background-color: rgba(43, 143, 236, 0.801);
+  color: white
+}
+.reg{
+  background-color: rgba(166, 170, 168, 0.8);
+  color: white
 }

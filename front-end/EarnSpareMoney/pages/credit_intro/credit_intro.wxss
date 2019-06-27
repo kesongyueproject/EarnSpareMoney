@@ -1,4 +1,24 @@
 /* pages/credit_intro/credit_intro.wxss */
 page{
-    background-color: #FFFFFF;
+  background-color: #F8F8F8;
+}
+.page__title{
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  
+}
+.weui-article{
+  font-weight: 300;
+  margin-left: 5%
+}
+.line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+
+}
+.list{
+  margin-left: 10%;
+  font-weight: 500
 }

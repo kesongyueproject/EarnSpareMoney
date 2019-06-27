@@ -9,7 +9,9 @@ Page({
     activity:{},
     cancel:"",
     mtype:"",
-    userID:""
+    userID:"",
+    atype:"other",
+    singleSelectQuestions:[]
   },
   onClick:function(){
     var that = this;
@@ -95,11 +97,59 @@ Page({
         that.setData({
           activity:res.data
         });
+        if(res.data.mtype == "questionnaire"){
+          wx.request({
+            url: 'http://happyzhier.club:3000/questionnaire?mid=' + mid,
+            method:'GET',
+            dataType:'json',
+            header: { 'content-type': 'application/json' },
+            success:function(res){
+              that.setData({
+                singleSelectQuestions:res.data.singleSelectQuestions
+              });
+            }
+          })
+        }
       }
     });
 
   },
 
+  finishMission:function(){
+    var that = this;
+    wx.request({
+      url: 'http://happyzhier.club:3000/finish',
+      method: 'PUT',
+      dataType: 'json',
+      header: { 'content-type': 'application/json' },
+      data:{
+        "mid":this.data.activity.mid,
+        "uid":this.data.userID
+      },
+      success: function (res) {
+        wx.showModal({
+          content: '恭喜完成任务',
+          showCancel:false,
+          success:function(){
+            wx.navigateBack({
+              
+            });
+          }
+        })
+      },
+      fail:function(res){
+        wx.showModal({
+          content: '连接服务器失败',
+          showCancel: false,
+        })
+      }
+    });
+  },
+  GoAuthorInfo:function(){
+    wx.navigateTo({
+      url: '/pages/author_info/author_info?name=' + this.data.userID,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
